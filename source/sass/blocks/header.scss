@@ -9,51 +9,28 @@
 
   overflow: hidden;
 
-  background-color: rgba($color-black-russian, 0.9);
+  background-color: $color-default-white;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 33px 0 32px;
-
-    @include vp-1023 {
-      max-width: unset;
-    }
+    padding: 20px 0 20px;
   }
 
   &__logo {
     position: relative;
     display: block;
 
-    width: 247px;
-    height: 35px;
-    margin-right: 40px;
-
-    @include vp-1023 {
-      margin-right: 20px;
-    }
-
-    @include vp-767 {
-      z-index: 11;
-
-      width: 165px;
-      margin-right: 0;
-    }
+    width: 99px;
+    height: 44px;
 
     svg {
       display: block;
 
-      width: 247px;
-      height: 35px;
-
-      @include vp-767 {
-        width: 165px;
-      }
+      width: 99px;
+      height: 44px;
     }
   }
 }

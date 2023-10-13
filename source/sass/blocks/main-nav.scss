@@ -1,5 +1,11 @@
 .main-nav {
-  &.is-active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1421px;
+
+  /* &.is-active {
     .main-nav__toggle {
       &::before {
         top: 15px;
@@ -15,7 +21,7 @@
     .main-nav__list {
       transform: translateX(0);
     }
-  }
+  } */
 
   &__toggle {
     z-index: 11;
@@ -65,12 +71,12 @@
   &__list {
     display: flex;
 
-    margin: 0;
-    padding: 0;
+    margin: 0 20px 0 73px;
+    padding: 18px 0 6px;
 
     list-style: none;
 
-    @include vp-767 {
+    /* @include vp-767 {
       z-index: 10;
       position: fixed;
       flex-direction: column;
@@ -87,51 +93,117 @@
 
       transition: transform $trans-default;
       transform: translateX(100%);
-    }
+    } */
   }
 
   &__item {
-    margin-right: 60px;
-
-    @include vp-1023 {
-      margin-right: 30px;
-    }
-
-    @include vp-767 {
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
+    margin-right: 40px;
 
     &:last-child {
       margin-right: 0;
-
-      @include vp-767 {
-        margin-bottom: 0;
-      }
     }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
-    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
 
-    color: $color-default-white;
+    color: $color-nero;
 
     transition: opacity $trans-default;
     transform: translate3d(0, 0, 0);
 
-    &.is-active {
-      color: $color-summer-sky;
+    svg {
+      flex-shrink: 0;
 
-      pointer-events: none;
+      width: 11px;
+      height: 6px;
+      margin-left: 5px;
+
+      transition: transform $trans-default;
     }
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__sublist {
+    margin: 0;
+    padding: 20px;
+
+    border-radius: 0 0 4px 4px;
+    background-color: $color-white-smoke;
+
+    list-style: none;
+  }
+
+  &__subitem {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sublink {
+    display: block;
+
+    font-size: 15px;
+    line-height: 20px;
+
+    color: $color-nero;
+  }
+
+  &__user-nav {
+    display: flex;
+    align-items: center;
+    padding: 11px 0 0;
+  }
+
+  &__search {
+    margin-right: 50px;
+  }
+
+  &__account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__language {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+  }
+
+  &__basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 21px;
+      height: 21px;
     }
   }
 }

@@ -3,36 +3,90 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "Купальники",
+        dropdown: [
+          {
+            href: "#",
+            text: "Лифы"
+          },
+          {
+            href: "#",
+            text: "Плавки"
+          },
+          {
+            href: "#",
+            text: "Слитые"
+          },
+          {
+            href: "#",
+            text: "Смотреть все"
+          }
+        ]
       },
       {
         href: "#",
-        text: "О нас"
+        text: "Белье"
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Одежда"
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "Аксессуары"
+      },
+      {
+        href: "#",
+        text: "Последний шанс",
+      },
+      {
+        href: "#",
+        text: "Подарочный сертификат"
+      },
+      {
+        href: "#",
+        text: "О нас"
+      },
+      {
+        href: "#",
+        text: "Магазины"
       }
     ]
 
   header.header(class=headerMods)
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
-          span.header__logo
-            +icon("logo", 247, 35)
-        else
-          a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 99, 44)
+
         nav.main-nav(data-menu)
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-menu-toggle).btn-reset.main-nav__toggle
           ul.main-nav__list
             each item in headerLinks
               li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
+                a.main-nav__link(href=item.href)!=item.text
+                  if (item.dropdown)
+                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L5.5 5.5L10 1" stroke="#292929" stroke-linejoin="round"/>
+                    </svg>
+
+                if (item.dropdown)
+                  .main-nav__dropdown
+                    ul.main-nav__sublist
+                      each subitem in item.dropdown
+                        li.main-nav__subitem
+                          a.main-nav__sublink(href=subitem.href)!=subitem.text
+          .main-nav__user-nav
+            +search().main-nav__search
+            .main-nav__account
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6 10.8C13.251 10.8 15.4 8.65097 15.4 6C15.4 3.34903 13.251 1.2 10.6 1.2C7.94903 1.2 5.8 3.34903 5.8 6C5.8 8.65097 7.94903 10.8 10.6 10.8ZM10.6 12C13.9137 12 16.6 9.31371 16.6 6C16.6 2.68629 13.9137 0 10.6 0C7.28629 0 4.6 2.68629 4.6 6C4.6 9.31371 7.28629 12 10.6 12Z" fill="#292929"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1 12.6C5.60446 12.6 1.2 16.8358 1.2 22H0C0 16.1185 4.99756 11.4 11.1 11.4C17.2024 11.4 22.2 16.1185 22.2 22H21C21 16.8358 16.5955 12.6 11.1 12.6Z" fill="#292929"/>
+              </svg>
+            .main-nav__language
+              span
+            .main-nav__basket
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.22972 7C7.22972 7 6.55098 0.999994 11.7022 1C16.8135 1.00001 16.1746 7 16.1746 7M5.2002 22H18.2002C20.4093 22 22.2002 20.2091 22.2002 18V8C22.2002 5.79086 20.4093 4 18.2002 4H5.2002C2.99106 4 1.2002 5.79086 1.2002 8V18C1.2002 20.2091 2.99106 22 5.2002 22Z" stroke="#292929" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
 
