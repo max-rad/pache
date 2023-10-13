@@ -36,7 +36,7 @@
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
+    @include vp-768 {
       display: block;
     }
 
@@ -76,7 +76,7 @@
 
     list-style: none;
 
-    /* @include vp-767 {
+    /* @include vp-768 {
       z-index: 10;
       position: fixed;
       flex-direction: column;
@@ -180,18 +180,53 @@
     align-items: center;
     margin-right: 20px;
 
+    cursor: pointer;
+    user-select: none;
+
     svg {
       flex-shrink: 0;
 
       width: 22px;
       height: 22px;
+
+      transition: opacity $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        opacity: 0.8;
+      }
     }
   }
 
   &__language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 25px;
     height: 25px;
     margin-right: 20px;
+
+    border: 1px solid $color-nero;
+    border-radius: 50%;
+
+    transition: opacity $trans-default;
+
+    cursor: pointer;
+    user-select: none;
+
+    span {
+      display: block;
+
+      font-size: 12px;
+      line-height: 16px;
+
+      color: $color-nero;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   &__basket {
@@ -199,11 +234,22 @@
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+    user-select: none;
+
     svg {
       flex-shrink: 0;
 
       width: 21px;
       height: 21px;
+
+      transition: opacity $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        opacity: 0.8;
+      }
     }
   }
 }
