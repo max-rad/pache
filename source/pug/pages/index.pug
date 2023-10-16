@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-    - const title = "global"
+    - const title = "Паче"
     - const wrapperMods = ""
     - const hasHeader = true
     - const headerMods = ""
@@ -11,5 +11,8 @@ block variables
 
 block main
     main
+      +intro()
+      +catalog()
+      +new-products()
 
 block modals

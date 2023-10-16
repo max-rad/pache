@@ -5,6 +5,10 @@
   border: 1px solid $color-nero;
   border-radius: 3px;
 
+  @include vp-1199 {
+    width: 100%;
+  }
+
   &__icon {
     display: flex;
     justify-content: center;

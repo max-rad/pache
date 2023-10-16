@@ -1,0 +1,19 @@
+mixin intro()
+  section.intro
+    h1.visually-hidden Интернет-магазин женского нижнего белья и купальников - ПАЧЕ
+    .intro__video
+      video(src="" autoplay loop muted)
+    .intro__slider.swiper(data-swiper="intro")
+      .intro__slides.swiper-wrapper
+        .intro__slide.swiper-slide
+          .intro__image-wrapper
+            +img("content/intro", "intro-background", "png", 4096, 2926, "background")
+        .intro__slide.swiper-slide
+          .intro__image-wrapper
+            +img("content/intro", "intro-background", "png", 4096, 2926, "background")
+        .intro__slide.swiper-slide
+          .intro__image-wrapper
+            +img("content/intro", "intro-background", "png", 4096, 2926, "background")
+      .swiper-pagination
+
+

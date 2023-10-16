@@ -61,23 +61,27 @@ mixin header(headerMods, currentUrl)
 
         nav.main-nav(data-menu)
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-menu-toggle).btn-reset.main-nav__toggle
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(href=item.href)!=item.text
-                  if (item.dropdown)
-                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 1L5.5 5.5L10 1" stroke="#292929" stroke-linejoin="round"/>
-                    </svg>
+            span
+            span
+            span
+          .main-nav__menu
+            ul.main-nav__list
+              each item in headerLinks
+                li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown})
+                  a.main-nav__link(href=item.href)!=item.text
+                    if (item.dropdown)
+                      <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5.5 5.5L10 1" stroke="#292929" stroke-linejoin="round"/>
+                      </svg>
 
-                if (item.dropdown)
-                  .main-nav__dropdown
-                    ul.main-nav__sublist
-                      each subitem in item.dropdown
-                        li.main-nav__subitem
-                          a.main-nav__sublink(href=subitem.href)!=subitem.text
-          .main-nav__user-nav
+                  if (item.dropdown)
+                    .main-nav__dropdown
+                      ul.main-nav__sublist
+                        each subitem in item.dropdown
+                          li.main-nav__subitem
+                            a.main-nav__sublink(href=subitem.href)!=subitem.text
             +search().main-nav__search
+          .main-nav__user-nav
             .main-nav__account
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6 10.8C13.251 10.8 15.4 8.65097 15.4 6C15.4 3.34903 13.251 1.2 10.6 1.2C7.94903 1.2 5.8 3.34903 5.8 6C5.8 8.65097 7.94903 10.8 10.6 10.8ZM10.6 12C13.9137 12 16.6 9.31371 16.6 6C16.6 2.68629 13.9137 0 10.6 0C7.28629 0 4.6 2.68629 4.6 6C4.6 9.31371 7.28629 12 10.6 12Z" fill="#292929"/>

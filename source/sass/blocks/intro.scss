@@ -1,0 +1,52 @@
+.intro {
+  &__video {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    height: 736px;
+
+    @include vp-1599 {
+      height: 613px;
+    }
+
+    @include vp-1023 {
+      height: 736px;
+    }
+
+    @include vp-767 {
+      height: 405px;
+    }
+
+    img {
+      width: 100%;
+      height: 736px;
+
+      object-fit: cover;
+
+      @include vp-1599 {
+        height: 613px;
+      }
+
+      @include vp-1023 {
+        height: 736px;
+      }
+
+      @include vp-767 {
+        height: 405px;
+      }
+    }
+  }
+}

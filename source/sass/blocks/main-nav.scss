@@ -3,64 +3,102 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1421px;
+  padding: 11px 0 0;
 
-  /* &.is-active {
+  @include vp-1439 {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  @include vp-1199 {
+    padding: 0;
+  }
+
+  &.is-active {
     .main-nav__toggle {
-      &::before {
-        top: 15px;
-        transform: rotate(-45deg) translate(0, -50%);
-      }
+      span {
+        &:nth-child(1) {
+          top: 10px;
+          transform: rotate(-45deg) translate(0, -50%);
+        }
 
-      &::after {
-        top: 13px;
-        transform: rotate(45deg) translate(0, 50%);
+        &:nth-child(2) {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 10px;
+          transform: rotate(45deg) translate(0, 50%);
+        }
+      }
+    }
+
+    .main-nav__menu {
+      @include vp-767 {
+        transform: translateX(0);
       }
     }
 
     .main-nav__list {
-      transform: translateX(0);
+      @media (min-width: 768px) {
+        transform: translateX(0);
+      }
     }
-  } */
+  }
 
   &__toggle {
     z-index: 11;
+    order: 1;
     position: relative;
     display: none;
+    flex-shrink: 0;
 
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 18px;
 
     cursor: pointer;
     user-select: none;
 
     transition: opacity $trans-default;
 
-    @include vp-768 {
+    @include vp-1199 {
       display: block;
     }
 
-    &::before,
-    &::after {
-      content: "";
+    @include vp-767 {
+      width: 38px;
+      height: 20px;
+    }
+
+    span {
+      display: block;
       position: absolute;
 
-      left: 0;
+      right: 0;
 
       width: 100%;
-      height: 2px;
+      height: 1px;
 
-      background-color: $color-default-white;
+      background-color: $color-default-black;
 
-      transition: transform $trans-default;
-    }
+      transition: transform $trans-default, opacity $trans-default;
 
-    &::before {
-      top: 10px;
-    }
+      transform: translateY(-50%);
 
-    &::after {
-      bottom: 10px;
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+
+        width: calc(100% - 10px);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
 
     @include hover-focus {
@@ -68,36 +106,149 @@
     }
   }
 
-  &__list {
+  &__menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 50px 0 73px;
 
-    margin: 0 20px 0 73px;
-    padding: 18px 0 6px;
+    @include vp-1599 {
+      margin: 0 33px 0 56px;
+    }
 
-    list-style: none;
+    @include vp-1439 {
+      margin: 0 20px;
+    }
 
-    /* @include vp-768 {
+    @include vp-1199 {
+      margin: 0 64px 0 0;
+    }
+
+    @include vp-767 {
       z-index: 10;
       position: fixed;
       flex-direction: column;
       justify-content: flex-start;
 
-      top: 100px;
+      top: 61px;
       left: 0;
 
       width: 100%;
       height: 100vh;
-      padding: 100px 20px 20px;
+      margin: 0;
+      padding: 20px 20px 40px;
 
-      background-color: rgba($color-black-russian, 0.9);
+      background-color: $color-default-white;
 
       transition: transform $trans-default;
       transform: translateX(100%);
-    } */
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    margin: 0 20px 0 0;
+    padding: 7px 0 6px;
+
+    list-style: none;
+
+    @include vp-1599 {
+      padding: 7px 0 7px;
+    }
+
+    @include vp-1199 {
+      z-index: 10;
+      position: fixed;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      top: 84px;
+      left: 0;
+
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 40px;
+
+      background-color: $color-default-white;
+
+      transition: transform $trans-default;
+      transform: translateX(100%);
+    }
+
+    @include vp-767 {
+      order: 1;
+      position: relative;
+      top: 0;
+
+      height: auto;
+      padding: 0;
+
+      background-color: $color-transparent;
+
+      transition: unset;
+      transform: translateX(0);
+    }
   }
 
   &__item {
+    position: relative;
+    display: flex;
     margin-right: 40px;
+
+    @include vp-1599 {
+      margin-right: 30px;
+    }
+
+    @include vp-1439 {
+      margin-right: 15px;
+    }
+
+    @include vp-1199 {
+      flex-direction: column;
+      margin-right: 0;
+    }
+
+    &--dropdown {
+      @media (min-width: 1200px) {
+        @include focus-within {
+          .main-nav__dropdown::before {
+            content: "";
+          }
+
+          .main-nav__dropdown {
+            display: block;
+          }
+        }
+
+        @include hover-focus {
+          .main-nav__dropdown::before {
+            content: "";
+          }
+
+          .main-nav__dropdown {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &::after {
+      @include vp-1199 {
+        content: "";
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: $color-light-gray;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -106,7 +257,7 @@
 
   &__link {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     font-weight: 400;
@@ -117,6 +268,11 @@
 
     transition: opacity $trans-default;
     transform: translate3d(0, 0, 0);
+
+    @include vp-1199 {
+      width: 100%;
+      padding: 15px 0;
+    }
 
     svg {
       flex-shrink: 0;
@@ -134,7 +290,35 @@
   }
 
   &__dropdown {
+    z-index: 100;
+    position: absolute;
     display: none;
+    top: calc(100% + 26px);
+
+    @include vp-1599 {
+      top: calc(100% + 27px);
+    }
+
+    @include vp-1199 {
+      position: relative;
+      top: 0;
+    }
+
+    &::before {
+      content: none;
+      position: absolute;
+      top: -26px;
+      left: 0;
+
+      width: 100%;
+      height: 26px;
+
+      @include vp-1599 {
+        top: -27px;
+
+        height: 27px;
+      }
+    }
   }
 
   &__sublist {
@@ -145,10 +329,20 @@
     background-color: $color-white-smoke;
 
     list-style: none;
+
+    @include vp-1199 {
+      padding: 0 0 15px;
+
+      background-color: $color-transparent;
+    }
   }
 
   &__subitem {
     margin-bottom: 15px;
+
+    @include vp-1199 {
+      margin-bottom: 20px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -162,16 +356,27 @@
     line-height: 20px;
 
     color: $color-nero;
+
+    transition: opacity $trans-default;
+
+    @include vp-1199 {
+      color: $color-grey;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__search {
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
   }
 
   &__user-nav {
     display: flex;
     align-items: center;
-    padding: 11px 0 0;
-  }
-
-  &__search {
-    margin-right: 50px;
   }
 
   &__account {
@@ -183,6 +388,14 @@
     cursor: pointer;
     user-select: none;
 
+    @include vp-1599 {
+      margin-right: 15px;
+    }
+
+    @include vp-1199 {
+      margin-right: 25px;
+    }
+
     svg {
       flex-shrink: 0;
 
@@ -190,6 +403,11 @@
       height: 22px;
 
       transition: opacity $trans-default;
+
+      @include vp-767 {
+        width: 21px;
+        height: 21px;
+      }
     }
 
     @include hover-focus {
@@ -203,6 +421,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     width: 25px;
     height: 25px;
     margin-right: 20px;
@@ -210,10 +429,23 @@
     border: 1px solid $color-nero;
     border-radius: 50%;
 
-    transition: opacity $trans-default;
+    transition: background-color $trans-default;
 
     cursor: pointer;
     user-select: none;
+
+    @include vp-1599 {
+      margin-right: 15px;
+    }
+
+    @include vp-1199 {
+      margin-right: 25px;
+    }
+
+    @include vp-767 {
+      width: 21px;
+      height: 21px;
+    }
 
     span {
       display: block;
@@ -225,7 +457,7 @@
     }
 
     @include hover-focus {
-      opacity: 0.8;
+      background-color: $color-light-gray;
     }
   }
 
@@ -236,6 +468,14 @@
 
     cursor: pointer;
     user-select: none;
+
+    @include vp-1199 {
+      margin-right: 63px;
+    }
+
+    @include vp-767 {
+      margin-right: 30px;
+    }
 
     svg {
       flex-shrink: 0;
