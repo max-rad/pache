@@ -164,6 +164,9 @@
     color: $color-nero;
     background-color: rgba($color-default-white, 0.44);
 
+    cursor: pointer;
+    user-select: none;
+
     svg {
       flex-shrink: 0;
 
