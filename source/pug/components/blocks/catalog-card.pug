@@ -1,7 +1,7 @@
 mixin catalog-card(data)
-  .catalog-card
+  a.catalog-card(href="#")
     .catalog-card__image-wrapper
-      +img("content/new-products", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+      +img("content/goods", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
       .catalog-card__menu
         ul.catalog-card__sizes-list
           each item in data.sizes
@@ -14,7 +14,7 @@ mixin catalog-card(data)
                 span.catalog-card__color(style={"background-color ": item.color})
               if (item.text)
                 span.catalog-card__text!=item.text
-        a.catalog-card__link(href="#")
+        button(type="button").btn-reset.catalog-card__button
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.46513 8.42857C8.46513 8.42857 7.62478 0.999992 14.0024 1C20.3308 1.00001 19.5398 8.42857 19.5398 8.42857M5.95238 27H22.0476C24.7827 27 27 24.7827 27 22.0476V9.66667C27 6.93154 24.7827 4.71429 22.0476 4.71429H5.95238C3.21726 4.71429 1 6.93154 1 9.66667V22.0476C1 24.7827 3.21726 27 5.95238 27Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>

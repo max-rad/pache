@@ -1,0 +1,12 @@
+mixin goods(data)
+  section.goods
+    .container
+      h2.goods__title!=data.title
+      .goods__slider.swiper(data-swiper="goods")
+        .goods__slides.swiper-wrapper
+          each item in data.list
+            .goods__slide.swiper-slide
+              +catalog-card(item)
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination

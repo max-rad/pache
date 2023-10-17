@@ -1,0 +1,11 @@
+mixin mailing()
+  .mailing
+    h2.mailing__title Подпишитесь на&nbsp;рассылку
+    p.mailing__description Вы&nbsp;раньше всех будете получать последние новости о&nbsp;специальных предложениях и&nbsp;многом другом!
+    .mailing__form
+      form(method="post")
+        .mailing__form-wrapper
+          label
+            input(type="email" name="email" placeholder="Введите ваш email")
+          button(type="submit").btn-reset.mailing__button Подписаться
+      p.mailing__text Нажимая на&nbsp;кнопку &laquo;Оформить заказ&raquo;, вы&nbsp;принимаете условия пользовательского соглашения и&nbsp;даёте согласие на&nbsp;обработку персональных данных.

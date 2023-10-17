@@ -1,0 +1,13 @@
+mixin stories()
+  section.stories
+    .container
+      h2.stories__title Истории
+    .stories__wrapper
+      .stories__info-wrapper
+        h3.stories__label Летняя тренировка ПАЧЕ
+        p.stories__description Самира Мустафаева провела летнюю тренировку ПАЧЕ х&nbsp;SM&nbsp;Stretching х&nbsp;Constance Hotels&amp;Resorts в&nbsp;ресторане &laquo;Fahrenheit x&nbsp;Dacha&raquo;
+        .stories__buttons
+          +btn({type: "button", text: "Читать эту историю", icon: {name: "icon-arrow", width: "10", height: "10"}}).stories__button
+          +btn({type: "button", text: "Читать все истории", icon: {name: "icon-arrow", width: "10", height: "10"}}).btn--white.stories__button
+      .stories__image-wrapper
+        +img("content/stories", "poster", "png", 960, 551, "poster")

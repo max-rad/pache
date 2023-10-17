@@ -1,0 +1,87 @@
+.goods {
+  padding: 70px 0;
+
+  @include vp-1599 {
+    padding: 60px 0;
+  }
+
+  @include vp-1023 {
+    padding: 40px 0;
+  }
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
+  &__title {
+    margin: 0 0 60px;
+
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 45px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      margin: 0 0 40px;
+
+      font-size: 25px;
+      line-height: 34px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 30px;
+
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+
+    @include vp-1023 {
+      max-width: 688px;
+    }
+
+    @include vp-767 {
+      max-width: 334px;
+    }
+  }
+
+  &__slides {
+    padding-bottom: 60px;
+
+    @include vp-1023 {
+      padding-bottom: 40px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    max-width: 464px;
+    margin-right: 64px;
+
+    @include vp-1599 {
+      //max-width: 397px;
+      margin-right: 45px;
+    }
+
+    @include vp-1023 {
+      //max-width: 334px;
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+  }
+}

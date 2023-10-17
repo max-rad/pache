@@ -1,3 +1,124 @@
 mixin footer(footerMods)
+  -
+    const catalogList = [
+      {
+        href: "#",
+        text: "Новинки"
+      },
+      {
+        href: "#",
+        text: "Купальники"
+      },
+      {
+        href: "#",
+        text: "Белье"
+      },
+      {
+        href: "#",
+        text: "Одежда"
+      },
+      {
+        href: "#",
+        text: "Спорт"
+      },
+      {
+        href: "#",
+        text: "Аксессуары"
+      },
+      {
+        href: "#",
+        text: "Сертификаты"
+      }
+    ]
+  -
+    const buyersList = [
+      {
+        href: "#",
+        text: "Доставка и&nbsp;оплата"
+      },
+      {
+        href: "#",
+        text: "Возврат"
+      },
+      {
+        href: "#",
+        text: "Пользовательское соглашение"
+      },
+      {
+        href: "#",
+        text: "Политика конфиденциальности"
+      },
+      {
+        href: "#",
+        text: "Подели"
+      }
+    ]
+  -
+    const aboutList = [
+      {
+        href: "#",
+        text: "О&nbsp;нас"
+      },
+      {
+        href: "#",
+        text: "Пресса о&nbsp;нас"
+      },
+      {
+        href: "#",
+        text: "Истории"
+      },
+      {
+        href: "#",
+        text: "Магазины"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__content
+          .footer__block.footer__block--catalog
+            h2.footer__label Каталог
+            ul.footer__list
+              each item in catalogList
+                li.footer__item
+                  a.footer__link(href=item.href)!=item.text
+          .footer__block.footer__block--buyers
+            h2.footer__label Покупателям
+            ul.footer__list
+              each item in buyersList
+                li.footer__item
+                  a.footer__link(href=item.href)!=item.text
+          .footer__block.footer__block--about
+            h2.footer__label О&nbsp;компании
+            ul.footer__list
+              each item in aboutList
+                li.footer__item
+                  a.footer__link(href=item.href)!=item.text
+          .footer__language
+            button(type="button").btn-reset.footer__button.is-active Русский
+            button(type="button").btn-reset.footer__button English
+          .footer__pay
+            ul.footer__pay-methods
+              li.footer__pay-method(aria-label="mir")
+                +icon("icon-mir", 43, 13)
+              li.footer__pay-method(aria-label="visa")
+                +icon("icon-visa", 42, 13)
+              li.footer__pay-method(aria-label="master card")
+                +icon("icon-master-card", 35, 27)
+          .footer__contacts
+            .footer__phone-wrapper
+              a.footer__phone(href="tel:+79257011681") +7&nbsp;925&nbsp;701-16-81
+              p.footer__schedule Ежедневно с&nbsp;11:00&ndash;21:00
+            ul.footer__socials
+              li.footer__social
+                a.footer__social-link(href="#")
+                  img(src="../img/content/icon-telegram.png" width="33" height="33")
+                  | Telegram
+              li.footer__social
+                a.footer__social-link(href="#")
+                  img(src="../img/content/icon-whatsapp.png" width="29" height="29")
+                  | WhatsApp
+        .footer__mailing
+          +mailing()
+          p.footer__copyright &copy;&nbsp;ПАЧЕ 2023

@@ -21,12 +21,17 @@
   align-items: center;
   justify-content: center;
 
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 14px;
 
   background-color: #f1f1f1;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  @media (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+  }
 
   &.swiper-button-disabled {
     opacity: 0.35;

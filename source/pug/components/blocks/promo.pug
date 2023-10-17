@@ -1,0 +1,19 @@
+mixin promo()
+  section.promo
+    .container
+      h2.promo__title Акции
+    ul.promo__list
+      li.promo__item
+        .promo__image-wrapper
+          +img("content/promo", "promo-1", "png", 960, 652, "promo")
+        .promo__info-wrapper
+          h3.promo__label -20% на&nbsp;нижнее белье
+          p.promo__description Скидка действует при покупке двух комплектов
+          +btn({type: "button", text: "Купить"})
+      li.promo__item
+        .promo__image-wrapper
+          +img("content/promo", "promo-2", "png", 960, 652, "promo")
+        .promo__info-wrapper
+          h3.promo__label -10% на&nbsp;весь чек
+          p.promo__description При покупке купальника и&nbsp;любого изделия из&nbsp;сетки
+          +btn({type: "button", text: "Купить"})
