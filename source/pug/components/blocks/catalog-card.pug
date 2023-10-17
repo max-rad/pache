@@ -1,5 +1,6 @@
 mixin catalog-card(data)
-  a.catalog-card(href="#")
+  .catalog-card
+    a.catalog-card__link(href="#")
     .catalog-card__image-wrapper
       +img("content/goods", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
       .catalog-card__menu
