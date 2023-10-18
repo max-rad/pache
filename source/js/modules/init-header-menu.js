@@ -26,7 +26,7 @@ const breakpointChecker = () => {
 
 const initHeaderMenu = () => {
   if (!menu) {
-    return
+    return;
   }
 
   if (menuToggle) {

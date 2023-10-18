@@ -1,0 +1,6 @@
+mixin size(data)
+  .size&attributes(attributes)
+    ul.size__list
+      each item in data
+        li.size__item
+          button(type="button").btn-reset.size__button!=item

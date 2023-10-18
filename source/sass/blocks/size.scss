@@ -1,0 +1,44 @@
+.size {
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 24px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    border: 1px solid $color-nobel;
+    border-radius: 2px;
+    color: $color-nero;
+
+    transition: background-color $trans-default;
+
+    cursor: pointer;
+    user-select: none;
+
+    @include hover-focus {
+      background-color: $color-nobel;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+mixin categories()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "728",
+          height: "866",
+          alt: "image"
+        },
+        title: "Белье"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "728",
+          height: "866",
+          alt: "image"
+        },
+        title: "Белье"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "728",
+          height: "866",
+          alt: "image"
+        },
+        title: "Белье"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "728",
+          height: "866",
+          alt: "image"
+        },
+        title: "Белье"
+      }
+    ]
+
+  section.categories
+    .container
+      h2.visually-hidden Каталог
+      ul.categories__list
+        each item in list
+          li.categories__item
+            a.categories__link(href=item.link)
+              .categories__image-wrapper
+                +img("content/categories", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+              .categories__title-wrapper
+                h3.categories__title!=item.title

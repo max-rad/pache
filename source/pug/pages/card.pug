@@ -1,20 +1,19 @@
 extends ../components/base/layout
 
 block variables
-    - const title = "Паче"
+    - const title = "Паче - Каталог - Карточка товара"
     - const wrapperMods = ""
     - const hasHeader = true
     - const headerMods = ""
     - const hasFooter = true
     - const footerMods = ""
-    - const currentUrl = "index.html"
+    - const currentUrl = "card.html"
 
 block main
     main
-      +intro()
-      +categories()
+      +card()
       +goods({
-        title: "Новинки",
+        title: "Дополните образ",
         list: [
           {
             image: {
@@ -177,10 +176,9 @@ block main
             ]
           }
         ]
-      })
-      +promo()
+      }).goods--tablet
       +goods({
-        title: "Мы рекомендуем",
+        title: "Вам может понравиться",
         list: [
           {
             image: {
@@ -345,15 +343,15 @@ block main
         ]
       })
       +goods({
-        title: "Лидеры продаж",
+        title: "Вы смотрели",
         list: [
           {
             image: {
-              src: "sales-leader-1",
+              src: "recommended-1",
               format: "png",
               width: "464",
               height: "620",
-              alt: "sales-leader-1"
+              alt: "recommended"
             },
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
@@ -381,11 +379,11 @@ block main
           },
           {
             image: {
-              src: "sales-leader-1",
+              src: "recommended-1",
               format: "png",
               width: "464",
               height: "620",
-              alt: "sales-leader-1"
+              alt: "recommended"
             },
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
@@ -413,11 +411,11 @@ block main
           },
           {
             image: {
-              src: "sales-leader-1",
+              src: "recommended-1",
               format: "png",
               width: "464",
               height: "620",
-              alt: "sales-leader-1"
+              alt: "recommended"
             },
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
@@ -445,11 +443,11 @@ block main
           },
           {
             image: {
-              src: "sales-leader-1",
+              src: "recommended-1",
               format: "png",
               width: "464",
               height: "620",
-              alt: "sales-leader-1"
+              alt: "recommended"
             },
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
@@ -477,11 +475,11 @@ block main
           },
           {
             image: {
-              src: "sales-leader-1",
+              src: "recommended-1",
               format: "png",
               width: "464",
               height: "620",
-              alt: "sales-leader-1"
+              alt: "recommended"
             },
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
@@ -509,7 +507,6 @@ block main
           }
         ]
       })
-      +stories()
-      +about()
+
 
 block modals

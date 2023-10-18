@@ -1,0 +1,333 @@
+mixin card(data)
+  -
+    const colorsList = [
+      "#292929",
+      "#ffffff",
+      "#d9619c",
+      "#92b66f",
+      "#8898b3",
+      "#d9619c",
+      "#292929",
+      "#ffffff",
+      "#d9619c",
+      "#92b66f",
+      "#8898b3",
+      "#d9619c"
+    ]
+
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Платье-сетка макси",
+        price: "7&nbsp;900&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          {
+            color: "#92b66f"
+          },
+          {
+            color: "#8898b3"
+          },
+          {
+            color: "#d9619c"
+          },
+          {
+            text: "+ Цвета"
+          }
+        ]
+      }
+    ]
+
+  section.card
+    .container
+      +breadcrumbs({
+        href: "#",
+        text: "Главная&nbsp;&mdash; Купальники&nbsp;&mdash; Гофре, Лиф бандо на&nbsp;тонких бретелях"
+      })
+      .card__wrapper
+        .card__slider.swiper(data-swiper="card")
+          .card__images.swiper-wrapper
+            .card__image-wrapper.swiper-slide
+              +img('content/card', "image-1", "png", 722, 1006, "image")
+            .card__image-wrapper.swiper-slide
+              +img('content/card', "image-2", "png", 722, 1006, "image")
+            .card__image-wrapper.swiper-slide
+              +img('content/card', "image-3", "png", 722, 1006, "image")
+            .card__image-wrapper.swiper-slide
+              +img('content/card', "image-4", "png", 722, 1006, "image")
+          .swiper-pagination
+        .card__sticky-wrapper
+          .card__info
+            h1.card__title Гофре. Лиф бандо на&nbsp;бретелях
+            p.card__price 6&nbsp;900&nbsp;₽
+            +size(["XS", "S", "M", "L", "XL"]).card__sizes
+            .card__colors(data-show-more="colors")
+              p.card__label Цвета
+              ul.card__colors-list
+                each item in colorsList
+                  li.card__color-item
+                    button(type="button" style={"background-color " : item} class={"card__color--white" : item === "#ffffff"}).btn-reset.card__color
+              .card__icon(data-show-more-button="colors")
+                +icon("icon-chevron-down", 12, 6)
+            +btn({type: "button", text: "Добавить в корзину"}).card__button
+            .card__tabs(data-tabs="parent")
+              .card__controls(data-tabs="controls")
+                button(type="button" data-tabs="control").btn-reset.card__control.is-active Описание
+                button(type="button" data-tabs="control").btn-reset.card__control Состав и&nbsp;уход
+                button(type="button" data-tabs="control").btn-reset.card__control Доставка, оплата
+              .card__content(data-tabs="content")
+                .card__element.is-active(data-tabs="element")
+                  .card__text
+                    p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.
+                    p Гофре. Лиф-топ имеет квадратный вырез на&nbsp;спине и&nbsp;V-образный в&nbsp;зоне декольте. Широкая эластичная резинка под грудью обеспечивает комфортную поддержку. В&nbsp;подкладе лифа имеются отверстия для чашек. Во&nbsp;все швы купальника вшиты силиконовые ленты, благодаря этому купальник хорошо держит форму
+                .card__element(data-tabs="element")
+                  .card__text
+                    p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.
+                    p Гофре. Лиф-топ имеет квадратный вырез на&nbsp;спине и&nbsp;V-образный в&nbsp;зоне декольте. Широкая эластичная резинка под грудью обеспечивает комфортную поддержку. В&nbsp;подкладе лифа имеются отверстия для чашек. Во&nbsp;все швы купальника вшиты силиконовые ленты, благодаря этому купальник хорошо держит форму
+                .card__element(data-tabs="element")
+                  .card__text
+                    p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.
+                    p Гофре. Лиф-топ имеет квадратный вырез на&nbsp;спине и&nbsp;V-образный в&nbsp;зоне декольте. Широкая эластичная резинка под грудью обеспечивает комфортную поддержку. В&nbsp;подкладе лифа имеются отверстия для чашек. Во&nbsp;все швы купальника вшиты силиконовые ленты, благодаря этому купальник хорошо держит форму
+        .card__aside
+          h2.card__aside-title Дополните образ
+          ul.card__list
+            each item in list
+              li.card__item
+                +catalog-card(item).catalog-card--aside

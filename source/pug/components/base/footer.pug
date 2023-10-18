@@ -100,11 +100,11 @@ mixin footer(footerMods)
             button(type="button").btn-reset.footer__button English
           .footer__pay
             ul.footer__pay-methods
-              li.footer__pay-method(aria-label="mir")
+              li.footer__pay-method(aria-label="Mir")
                 +icon("icon-mir", 43, 13)
-              li.footer__pay-method(aria-label="visa")
+              li.footer__pay-method(aria-label="Visa")
                 +icon("icon-visa", 42, 13)
-              li.footer__pay-method(aria-label="master card")
+              li.footer__pay-method(aria-label="Master Card")
                 +icon("icon-master-card", 35, 27)
           .footer__contacts
             .footer__phone-wrapper
@@ -113,11 +113,11 @@ mixin footer(footerMods)
             ul.footer__socials
               li.footer__social
                 a.footer__social-link(href="#")
-                  img(src="../img/content/icon-telegram.png" width="33" height="33")
+                  +icon("icon-telegram", 33, 33)
                   | Telegram
               li.footer__social
                 a.footer__social-link(href="#")
-                  img(src="../img/content/icon-whatsapp.png" width="29" height="29")
+                  +icon("icon-whatsapp", 29, 29)
                   | WhatsApp
         .footer__mailing
           +mailing()

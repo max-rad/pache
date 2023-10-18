@@ -1,5 +1,5 @@
 mixin goods(data)
-  section.goods
+  section.goods&attributes(attributes)
     .container
       h2.goods__title!=data.title
       .goods__slider.swiper(data-swiper="goods")

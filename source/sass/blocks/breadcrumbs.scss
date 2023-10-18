@@ -1,0 +1,64 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    transition: opacity $trans-default;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 32px;
+      height: 29px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "\00a0\2014\0020";
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+
+      color: $color-silver;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: $color-silver;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
+  }
+}

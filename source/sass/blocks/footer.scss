@@ -36,7 +36,7 @@
     }
 
     @include vp-1199 {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr minmax(169px, 1fr);
       column-gap: 80px;
       margin-bottom: 50px;
     }
@@ -110,11 +110,7 @@
     }
 
     &--about {
-      grid-column: 1 / 2;
-
-      @include vp-1199 {
-        grid-column: 3 / 4;
-      }
+      grid-column: 3 / 4;
 
       @include vp-767 {
         grid-column: 1 / 2;
@@ -318,6 +314,12 @@
     text-transform: uppercase;
 
     color: $color-default-white;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   &__schedule {

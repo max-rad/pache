@@ -1,0 +1,5 @@
+mixin breadcrumbs(data)
+  .breadcrumbs
+    a.breadcrumbs__link(href=data.href aria-label="Вернуться назад")
+      +icon("icon-arrow-back", 32, 29)
+    p.breadcrumbs__text!=data.text
