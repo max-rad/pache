@@ -5,6 +5,16 @@ export class Tabs {
   }
 
   _init() {
+    document.addEventListener('click', this._documentClickHandler);
+  }
+
+  _documentClickHandler(evt) {
+    const target = evt.target;
+
+    if (!target.closest('[data-tabs="control"]')) {
+      return;
+    }
+
 
   }
 }
