@@ -2895,6 +2895,10 @@ button,
   width: calc(100% + (100vw - 100%) / 2);
 }
 
+.card__slider {
+  margin: 0;
+}
+
 .card__images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4420,7 +4424,7 @@ button,
   .card__slider {
     width: 100%;
     max-width: 334px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
   }
 
   .card__images {
