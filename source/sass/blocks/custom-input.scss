@@ -1,0 +1,73 @@
+.custom-input {
+  label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    margin-bottom: 5px;
+
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: $color-nero;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 5px 20px 4px;
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    border: 1px solid $color-gainsboro;
+    border-radius: 2px;
+    background-color: $color-default-white;
+
+    outline: none;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 23px;
+
+      color: $color-grey;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 50%;
+    right: 20px;
+
+    transform: translateY(-50%);
+
+    svg {
+      flex-shrink: 0;
+
+      width: 8px;
+      height: 16px;
+    }
+  }
+
+  &--icon {
+    input {
+      padding: 5px 48px 4px 20px;
+    }
+  }
+}

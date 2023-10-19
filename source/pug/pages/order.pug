@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Паче - Оформление заказа"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "order.html"
+
+block main
+    main
+      +order()
+
+
+block modals

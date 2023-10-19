@@ -1,0 +1,23 @@
+mixin total()
+  .total&attributes(attributes)
+    .total__info
+      h2.total__title Итог заказа
+      ul.total__list
+        li.total__item
+          span.total__text 2&nbsp;товара на&nbsp;сумму
+          span.total__text 5&nbsp;800&nbsp;₽
+        .total__item
+          span.total__text Доставка
+          span.total__text Бесплатно
+        .total__item
+          span.total__text.total__text--bold К&nbsp;оплате
+          span.total__text.total__text--bold 5&nbsp;800&nbsp;₽
+      +btn({type: 'submit', text: "Оформить заказ"}).total__button
+      p.total__agreement Нажимая на&nbsp;кнопку &laquo;Оформить заказ&raquo;, вы&nbsp;принимаете условия пользовательского соглашения и&nbsp;даёте согласие на&nbsp;обработку персональных данных.
+    .total__additional-info
+      p.total__text Добавьте ещё товаров на&nbsp;сумму 700&nbsp;₽ и&nbsp;получите бесплатную доставку
+    .total__additional-info.total__additional-info--image
+      p.total__text Добавьте ещё товаров на&nbsp;сумму 5&nbsp;700&nbsp;₽ и&nbsp;получите холщевую сумку в&nbsp;подарок
+      .total__image-wrapper
+        +img("content", "canvas-bag", "png", 153, 184)
+

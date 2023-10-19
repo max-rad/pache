@@ -1,0 +1,156 @@
+mixin order()
+  section.order
+    .container
+      +breadcrumbs({
+        href: "#",
+        text: "Главная&nbsp;&mdash; Купальники&nbsp;&mdash; Оформление заказа"
+      })
+      .order__wrapper
+        h1.order__title Оформление заказа
+        .order__content
+          .order__form
+            form(method="post")
+              .order__form-wrapper
+                .order__block
+                  h2.order__label Покупатель
+                  .order__block-wrapper
+                    .order__inputs
+                      +custom-input({
+                        label: "Имя и&nbsp;фамилия*",
+                        type: "text",
+                        name: "name",
+                      }).order__input
+                      +custom-input({
+                        label: "E-mail*",
+                        type: "text",
+                        name: "email",
+                      }).order__input
+                      +custom-input({
+                        label: "Телефон*",
+                        type: "text",
+                        name: "phone",
+                      }).order__input
+                      +custom-input({
+                        label: "Индекс",
+                        type: "number",
+                        name: "postcode",
+                      }).order__input
+                      +custom-input({
+                        label: "Город",
+                        type: "text",
+                        name: "city",
+                      }).order__input
+                      +custom-input({
+                        label: "Улица",
+                        type: "text",
+                        name: "street",
+                      }).order__input
+                      +custom-input({
+                        label: "Дом",
+                        type: "number",
+                        name: "house",
+                      }).order__input
+                      +custom-input({
+                        label: "Квартира",
+                        type: "number",
+                        name: "apartment",
+                      }).order__input
+                    .order__controls
+                      +btn({type: "button", text: "Подтвердить"}).order__button
+                .order__block
+                  h2.order__label Доставка
+                  .order__block-wrapper
+                    .order__info
+                      .order__inputs
+                        +custom-checkbox({
+                          label: "Самовывоз из&nbsp;магазина Москва/СПБ/Лимасол",
+                          name: "pickup",
+                          checked: true
+                        }).order__input
+                        +custom-checkbox({
+                          label: "Доставка с&nbsp;примеркой",
+                          name: "delivery",
+                        }).order__input
+                        +custom-checkbox({
+                          label: "Доставка с&nbsp;примеркой Москва/СПБ/Лимасол",
+                          name: "delivery-city",
+                        }).order__input
+                      .order__delivery
+                        p.order__text Самовывоз из&nbsp;магазина Москва/СПБ/Лимасол
+                        .order__price-wrapper
+                          p.order__price-label Цена
+                          p.order__price 100&nbsp;₽
+                    .order__coupon
+                      +custom-input({
+                        type: "text",
+                        name: "coupon",
+                        placeholder: "Применить купон",
+                        icon: {
+                          name: "icon-chevron-right",
+                          width: 8,
+                          height: 16
+                        }
+                      })
+                    .order__controls
+                      button(type="button").btn-reset.order__return Вернуться назад
+                      +btn({type: "button", text: "Подтвердить"}).order__button
+                .order__block
+                  h2.order__label Оплата
+                  .order__block-wrapper
+                    .order__info
+                      .order__inputs
+                        +custom-checkbox({
+                          label: "Наличными или картой при получении",
+                          name: "cash-or-card",
+                          checked: true
+                        }).order__input
+                        +custom-checkbox({
+                          label: "Банковской картой",
+                          name: "card",
+                        }).order__input
+                        +custom-checkbox({
+                          label: "Оплата онлайн",
+                          name: "online-pay",
+                        }).order__input
+                        +custom-checkbox({
+                          label: "Подели",
+                          name: "podeli",
+                        }).order__input
+                      .order__pay
+                        p.order__text
+                          +icon("icon-cash", 33, 25)
+                          | Наличными или картой при получении
+                    .order__coupon
+                      +custom-input({
+                        type: "text",
+                        name: "coupon",
+                        placeholder: "Применить купон",
+                        icon: {
+                          name: "icon-chevron-right",
+                          width: 8,
+                          height: 16
+                        }
+                      })
+                    .order__controls
+                      button(type="button").btn-reset.order__return Вернуться назад
+                      +btn({type: "button", text: "Подтвердить"}).order__button
+                .order__block
+                  h2.order__label Товары в&nbsp;заказе
+                  .order__block-wrapper
+                    .order__info
+
+                    .order__coupon
+                      +custom-input({
+                        type: "text",
+                        name: "coupon",
+                        placeholder: "Применить купон",
+                        icon: {
+                          name: "icon-chevron-right",
+                          width: 8,
+                          height: 16
+                        }
+                      })
+                    .order__controls
+                      button(type="button").btn-reset.order__return Вернуться назад
+                      +btn({type: "button", text: "Подтвердить"}).order__button
+          +total().order__total

@@ -307,20 +307,19 @@ mixin card(data)
               .card__icon(data-show-more-button="colors")
                 +icon("icon-chevron-down", 12, 6)
             +btn({type: "button", text: "Добавить в корзину"}).card__button
-            .card__tabs(data-tabs="parent")
+            .card__tabs(data-tabs="parent" data-height="max")
               .card__controls(data-tabs="controls")
                 button(type="button" data-tabs="control").btn-reset.card__control.is-active Описание
                 button(type="button" data-tabs="control").btn-reset.card__control Состав и&nbsp;уход
                 button(type="button" data-tabs="control").btn-reset.card__control Доставка, оплата
               .card__content(data-tabs="content")
-                .card__element.is-active(data-tabs="element")
+                .card__element.is-active.for-load(data-tabs="element")
                   .card__text
                     p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.
                     p Гофре. Лиф-топ имеет квадратный вырез на&nbsp;спине и&nbsp;V-образный в&nbsp;зоне декольте. Широкая эластичная резинка под грудью обеспечивает комфортную поддержку. В&nbsp;подкладе лифа имеются отверстия для чашек. Во&nbsp;все швы купальника вшиты силиконовые ленты, благодаря этому купальник хорошо держит форму
                 .card__element(data-tabs="element")
                   .card__text
                     p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.
-                    p Гофре. Лиф-топ имеет квадратный вырез на&nbsp;спине и&nbsp;V-образный в&nbsp;зоне декольте. Широкая эластичная резинка под грудью обеспечивает комфортную поддержку. В&nbsp;подкладе лифа имеются отверстия для чашек. Во&nbsp;все швы купальника вшиты силиконовые ленты, благодаря этому купальник хорошо держит форму
                 .card__element(data-tabs="element")
                   .card__text
                     p Пополнение наличия купальников производится ежедневно. Если нужного вам цвета нет в&nbsp;наличии то&nbsp;свяжитесь, пожалуйста, с&nbsp;нами и&nbsp;мы&nbsp;сошьём его для вас.

@@ -4,6 +4,7 @@ import {initGoodsSlider} from './modules/init-goods-slider.js';
 import {initHeaderAccordion} from './modules/init-header-accordion.js';
 import {initCardSlider} from './modules/init-card-slider.js';
 import {initShowMore} from './modules/init-show-more.js';
+import {initTabs} from './modules/tabs/init-tabs.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -13,5 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initGoodsSlider();
     initCardSlider();
     initShowMore();
+    initTabs();
   });
 });
