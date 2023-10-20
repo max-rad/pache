@@ -78,6 +78,55 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &.is-valid {
+      .order__label::before {
+        background-color: $color-oxley;
+        color: $color-default-white;
+      }
+
+      .order__block-wrapper {
+        display: none;
+
+        &--result {
+          display: block;
+        }
+      }
+
+      .order__success {
+        display: block;
+      }
+    }
+
+    &.is-invalid {
+      .order__label::before {
+        background-color: $color-contessa;
+        color: $color-default-white;
+      }
+
+      .order__block-wrapper {
+        display: none;
+
+        &--result {
+          display: block;
+        }
+      }
+
+      .order__errors {
+        display: block;
+      }
+    }
+  }
+
+  &__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    border-radius: 0 10px 10px 0;
+    background-color: $color-white-smoke;
   }
 
   &__label {
@@ -85,15 +134,12 @@
     display: flex;
     align-items: center;
 
-    margin: 0;
-    padding: 10px 20px;
+    margin: 0 20px 0 0;
 
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 
-    border-radius: 0 10px 10px 0;
-    background-color: $color-white-smoke;
     color: $color-nero;
 
     counter-increment: counter 1;
@@ -121,11 +167,37 @@
       border-radius: 2px;
       background-color: $color-nero;
       color: $color-default-white;
+
+      transition: background-color $trans-default, color $trans-default;
+    }
+  }
+
+  &__change {
+    display: block;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 23px;
+    text-decoration: underline;
+
+    color: $color-nero;
+
+    transition: opacity $trans-default;
+
+    cursor: pointer;
+    user-select: none;
+
+    @include hover-focus {
+      opacity: 0.8;
     }
   }
 
   &__block-wrapper {
     padding: 20px 20px 30px;
+
+    &--result {
+      display: none;
+    }
   }
 
   &__info {
@@ -198,6 +270,103 @@
     }
   }
 
+  &__errors {
+    display: none;
+  }
+
+  &__error {
+    margin: 0 0 20px;
+    padding: 10px 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    border-radius: 4px;
+    background-color: $color-cosmos;
+    color: $color-contessa;
+
+    @include vp-1199 {
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__success {
+    position: relative;
+    display: none;
+
+    &--basket {
+      &::after {
+        z-index: 1;
+        content: "";
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(357deg, $color-default-white 2.63%, rgba($color-default-white, 0.58) 43.24%, rgba($color-default-white, 0) 81.75%);
+      }
+    }
+  }
+
+  &__parameters {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-nero;
+
+    @include vp-1199 {
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $color-nero;
+
+    @include vp-1199 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 33px;
+      height: 25px;
+      margin-right: 20px;
+
+      color: $color-oxley;
+    }
+  }
+
   &__delivery {
     flex-shrink: 0;
 
@@ -249,6 +418,8 @@
       width: 33px;
       height: 25px;
       margin-right: 25px;
+
+      color: $color-nero;
     }
   }
 
@@ -332,6 +503,26 @@
 
     &::after {
       bottom: 0;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    @include vp-1599 {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

@@ -5,6 +5,9 @@ import {initHeaderAccordion} from './modules/init-header-accordion.js';
 import {initCardSlider} from './modules/init-card-slider.js';
 import {initShowMore} from './modules/init-show-more.js';
 import {initTabs} from './modules/tabs/init-tabs.js';
+import {initModals} from './modules/modals/init-modals.js';
+import {initMapSlider} from './modules/init-map-slider.js';
+import {initCompleteLookSlider} from './modules/init-complete-look-slider.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -15,5 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initCardSlider();
     initShowMore();
     initTabs();
+    initModals();
+    initMapSlider();
+    initCompleteLookSlider();
   });
 });

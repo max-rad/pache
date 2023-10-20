@@ -1,4 +1,38 @@
 mixin order()
+  -
+    const list = [
+      {
+        image: {
+          src: "basket-image-1",
+          format: "png",
+          width: "100",
+          height: "128",
+          alt: "image"
+        },
+        title: "Слитый купальник на&nbsp;тонких бретелях",
+        size: "S",
+        price: "2&nbsp;900&nbsp;₽",
+        quantity: "1&nbsp;шт",
+        totalPrice: "2&nbsp;900&nbsp;₽",
+        color: "#292929"
+      },
+      {
+        image: {
+          src: "basket-image-2",
+          format: "png",
+          width: "100",
+          height: "128",
+          alt: "image"
+        },
+        title: "Гофре лиф-топ на&nbsp;тонких бретелях",
+        size: "M",
+        price: "2&nbsp;900&nbsp;₽",
+        quantity: "1&nbsp;шт",
+        totalPrice: "2&nbsp;900&nbsp;₽",
+        color: "#ffffff"
+      }
+    ]
+
   section.order
     .container
       +breadcrumbs({
@@ -12,7 +46,9 @@ mixin order()
             form(method="post")
               .order__form-wrapper
                 .order__block
-                  h2.order__label Покупатель
+                  .order__label-wrapper
+                    h2.order__label Покупатель
+                    button(type="button").btn-reset.order__change Изменить
                   .order__block-wrapper
                     .order__inputs
                       +custom-input({
@@ -57,8 +93,15 @@ mixin order()
                       }).order__input
                     .order__controls
                       +btn({type: "button", text: "Подтвердить"}).order__button
+                  .order__block-wrapper.order__block-wrapper--result
+                    .order__errors
+                      p.order__error Поле &laquo;Имя&raquo; не&nbsp;заполнено
+                      p.order__parameters Параметры заказа
+                    .order__success
                 .order__block
-                  h2.order__label Доставка
+                  .order__label-wrapper
+                    h2.order__label Доставка
+                    button(type="button").btn-reset.order__change Изменить
                   .order__block-wrapper
                     .order__info
                       .order__inputs
@@ -94,8 +137,14 @@ mixin order()
                     .order__controls
                       button(type="button").btn-reset.order__return Вернуться назад
                       +btn({type: "button", text: "Подтвердить"}).order__button
+                  .order__block-wrapper.order__block-wrapper--result
+                    .order__errors
+                    .order__success
+                      p.order__result Самовывоз из&nbsp;магазина Москва/СПБ/Лимасол
                 .order__block
-                  h2.order__label Оплата
+                  .order__label-wrapper
+                    h2.order__label Оплата
+                    button(type="button").btn-reset.order__change Изменить
                   .order__block-wrapper
                     .order__info
                       .order__inputs
@@ -134,11 +183,22 @@ mixin order()
                     .order__controls
                       button(type="button").btn-reset.order__return Вернуться назад
                       +btn({type: "button", text: "Подтвердить"}).order__button
+                  .order__block-wrapper.order__block-wrapper--result
+                    .order__errors
+                    .order__success
+                      p.order__result
+                        +icon("icon-cash", 33, 25)
+                        | Наличными или картой при получении
                 .order__block
-                  h2.order__label Товары в&nbsp;заказе
+                  .order__label-wrapper
+                    h2.order__label Товары в&nbsp;заказе
+                    button(type="button").btn-reset.order__change Изменить
                   .order__block-wrapper
                     .order__info
-
+                      ul.order__list
+                        each item in list
+                          li.order__item
+                            +basket-card(item)
                     .order__coupon
                       +custom-input({
                         type: "text",
@@ -153,4 +213,22 @@ mixin order()
                     .order__controls
                       button(type="button").btn-reset.order__return Вернуться назад
                       +btn({type: "button", text: "Подтвердить"}).order__button
+                  .order__block-wrapper.order__block-wrapper--result
+                    .order__errors
+                    .order__success.order__success--basket
+                      +basket-card({
+                        image: {
+                          src: "basket-image-1",
+                          format: "png",
+                          width: "100",
+                          height: "128",
+                          alt: "image"
+                        },
+                        title: "Слитый купальник на&nbsp;тонких бретелях",
+                        size: "S",
+                        price: "2&nbsp;900&nbsp;₽",
+                        quantity: "1&nbsp;шт",
+                        totalPrice: "2&nbsp;900&nbsp;₽",
+                        color: "#292929"
+                      })
           +total().order__total

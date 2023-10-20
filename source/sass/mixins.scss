@@ -88,7 +88,7 @@
   }
 }
 
-@mixin vp-640 {
+@mixin vp-639 {
   @media (max-width: ($vp-640 - 1px)) {
     @content;
   }

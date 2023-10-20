@@ -12,7 +12,7 @@ mixin catalog-card(data)
                 span.catalog-card__color(style={"background-color ": item.color})
               if (item.text)
                 span.catalog-card__text!=item.text
-        button(type="button").btn-reset.catalog-card__button
+        button(type="button" data-open-modal="add-to-basket").btn-reset.catalog-card__button
           +icon("icon-basket", 28, 28)
           | Купить
     .catalog-card__title-wrapper

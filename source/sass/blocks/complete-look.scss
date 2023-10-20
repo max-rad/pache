@@ -1,0 +1,9 @@
+.complete-look {
+  &__slider {
+    width: 100%;
+
+    @include vp-767 {
+      max-width: 334px;
+    }
+  }
+}

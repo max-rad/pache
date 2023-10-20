@@ -1,0 +1,16 @@
+mixin basket-card(data)
+  .basket-card
+    .basket-card__image-wrapper
+      +img("content", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    h2.basket-card__title!=data.title
+    .basket-card__info
+      .basket-card__parameters
+        .basket-card__size-wrapper
+          span.basket-card__label Размер:
+          span.basket-card__size!=data.size
+        .basket-card__color-wrapper
+          span.basket-card__label Цвет:
+          span.basket-card__color(class={"basket-card__color--white" : data.color === "#ffffff"} style={"background-color " : data.color})
+      p.basket-card__price!=data.price
+      p.basket-card__quantity!=data.quantity
+      p.basket-card__total-price!=data.totalPrice

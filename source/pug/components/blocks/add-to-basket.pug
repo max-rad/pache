@@ -1,0 +1,14 @@
+mixin add-to-basket()
+  .add-to-basket
+    h2.add-to-basket__title Товар
+      =" "
+      span ЛИФ КЛАССИКА
+      =" "
+      | добавлен в корзину
+    .add-to-basket__wrapper
+      .add-to-basket__image-wrapper
+        +img("content/goods", "image-1", "png", 267, 333, "image")
+      .add-to-basket__buttons
+        +btn({type: "button", text: "Перейти к&nbsp;оформлению"}).add-to-basket__button
+        +btn({type: "button", text: "Продолжить покупки"})(data-close-modal).btn--white
+    +complete-look()

@@ -1,0 +1,166 @@
+mixin stores()
+  -
+    const list = [
+      {
+        city: "Москва",
+        sublist: [
+          {
+            store: "Малый Козихинский переулок",
+            icon: {
+              name: "icon-crown",
+              width: "18",
+              height: "13"
+            },
+            address: "Малый Козихинский переулок&nbsp;д.&nbsp;10&nbsp;строение 2",
+            phone: "Телефоны: +7&nbsp;925 701-16-81",
+            time: "С&nbsp;11:00 до&nbsp;21:00 без выходных",
+            isActive: true,
+          },
+          {
+            store: "ГУМ",
+            address: "Красная площадь, д.&nbsp;3, 2&nbsp;этаж",
+            phone: "Телефоны: +7&nbsp;495 620-33-28",
+            time: "С&nbsp;10:00 до&nbsp;22:00 без выходных"
+          },
+          {
+            store: "Белая Дача аутлет",
+            address: "Московская обл., г. Котельники, Новорязанское шоссе, д.&nbsp;8., строение 2",
+            phone: "Телефоны: 8&nbsp;800 700-02-79",
+            time: "С&nbsp;10:00 до&nbsp;22:00 без выходных"
+          }
+        ],
+      },
+      {
+        city: "Cанкт-Петербург",
+        sublist: [
+          {
+            store: "Социалистическая",
+            icon: {
+              name: "icon-crown",
+              width: "18",
+              height: "13"
+            },
+            address: "ул. Социалистическая, д.&nbsp;21",
+            phone: "Телефоны: +7&nbsp;981 158-26-30",
+            time: "С&nbsp;11:00 до&nbsp;21:00 без выходных"
+          },
+          {
+            store: "Универмаг Дом Мод",
+            address: "Станция метро Петроградская, Каменоостровский&nbsp;пр., д.&nbsp;37",
+            phone: "Телефоны: +7&nbsp;812 644-62-50",
+            time: "С&nbsp;10:00 до&nbsp;22:00 без выходных"
+          }
+        ]
+      },
+      {
+        city: "Екатеринбург",
+        sublist: [
+          {
+            store: "Универмаг BOLSHOY",
+            address: "ул. Малышева, д.&nbsp;71, 2&nbsp;этаж",
+            phone: "Телефоны: +7&nbsp;343 385-90-07",
+            time: "С&nbsp;10:00 до&nbsp;22:00 без выходных"
+          }
+        ]
+      },
+      {
+        city: "Лимасол",
+        sublist: [
+          {
+            store: "Anexartisias Street",
+            icon: {
+              name: "icon-crown",
+              width: "18",
+              height: "13"
+            },
+            address: "ул. Малышева, д.&nbsp;71, 2&nbsp;этаж",
+            phone: "Телефоны: +7&nbsp;343 385-90-07",
+            time: "С&nbsp;10:00 до&nbsp;22:00 без выходных"
+          }
+        ]
+      },
+      {
+        city: "Минск",
+        sublist: [
+          {
+            store: "Concept Store Spot&nbsp;2.55",
+            address: "ул. Сторожовская, д.&nbsp;6",
+            phone: "Телефоны: +375 29 115&mdash;22&mdash;55",
+            time: "С&nbsp;10:00 до&nbsp;20:00 без выходных"
+          }
+        ]
+      },
+      {
+        city: "Южно-Сахалинск",
+        sublist: [
+          {
+            store: "ТЦ&nbsp;Клевер Холл",
+            address: "ул. Проспект мира 286/1, Naked lingerie",
+            phone: "Телефоны: +375 29 115&mdash;22&mdash;55",
+            info: "Представлено только белье",
+            time: "Время работы: уточняйте перед посещением"
+          }
+        ]
+      }
+    ]
+
+  section.stores
+    .container
+      +breadcrumbs({
+        href: "#",
+        text: "Главная&nbsp;&mdash; Магазины"
+      })
+      .stores__wrapper
+        h1.stores__title Магазины
+        .stores__content
+          ul.stores__list(data-map-list)
+            each item in list
+              li.stores__item
+                h2.stores__city!=item.city
+                ul.stores__sublist
+                  each subitem in item.sublist
+                    li.stores__subitem(class={"is-active" : subitem.isActive} data-map-item)
+                      a(href="#").stores__link
+                        h3.stores__store
+                          span.stores__location
+                            +icon("icon-location", 17, 21)
+                          span.stores__text!=subitem.store
+                          if (subitem.icon)
+                            span.stores__crown
+                              +icon(subitem.icon.name, subitem.icon.width, subitem.icon.height)
+                        .stores__info
+                          p!=subitem.address
+                          p!=subitem.phone
+                          if (subitem.info)
+                            p!=subitem.info
+                          p!=subitem.time
+          .stores__map(data-map)
+            .stores__slider.swiper(data-swiper="map")
+              .stores__slides.swiper-wrapper
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")
+                .stores__slide.swiper-slide
+                  .stores__image-wrapper
+                    +img("content/maps", "map-1", "png", 1038, 511, "map")

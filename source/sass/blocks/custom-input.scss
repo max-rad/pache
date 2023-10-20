@@ -55,7 +55,15 @@
     top: 50%;
     right: 20px;
 
+    transition: opacity $trans-default;
     transform: translateY(-50%);
+
+    cursor: pointer;
+    user-select: none;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
 
     svg {
       flex-shrink: 0;
