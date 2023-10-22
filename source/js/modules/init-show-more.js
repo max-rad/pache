@@ -1,7 +1,7 @@
 const initShowMore = () => {
   const showMore = document.querySelectorAll('[data-show-more]');
 
-  if (!showMore) {
+  if (!showMore.length) {
     return;
   }
 

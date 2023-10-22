@@ -3,7 +3,11 @@
     width: 100%;
 
     @include vp-767 {
-      max-width: 334px;
+      max-width: 580px;
+    }
+
+    @include vp-619 {
+      max-width: 280px;
     }
   }
 }

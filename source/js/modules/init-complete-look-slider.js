@@ -1,13 +1,16 @@
+import { initElementSizeObserver } from '../utils/element-size-observer';
 import {Swiper} from '../vendor/swiper-bundle';
 
 const initCompleteLookSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="complete-look"]');
 
-  if (!sliders) {
+  if (!sliders.length) {
     return;
   }
 
   sliders.forEach((slider) => {
+    initElementSizeObserver(slider);
+
     const swiper = new Swiper(slider, {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -24,7 +27,7 @@ const initCompleteLookSlider = () => {
           slidesPerView: 1,
           spaceBetween: 20,
         },
-        767: {
+        620: {
           slidesPerView: 2,
           spaceBetween: 20,
         }

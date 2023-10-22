@@ -1,13 +1,16 @@
+import {initElementSizeObserver} from '../utils/element-size-observer';
 import {Swiper} from '../vendor/swiper-bundle';
 
 const initGoodsSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="goods"]');
 
-  if (!sliders) {
+  if (!sliders.length) {
     return;
   }
 
   sliders.forEach((slider) => {
+    initElementSizeObserver(slider);
+
     const swiper = new Swiper(slider, {
       slidesPerView: 3,
       spaceBetween: 64,
@@ -24,19 +27,19 @@ const initGoodsSlider = () => {
           slidesPerView: 1,
           spaceBetween: 20,
         },
-        767: {
+        620: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        1023: {
+        1024: {
           slidesPerView: 3,
-          spaceBetween: 20,
+          spaceBetween: 30,
         },
-        1199: {
+        1440: {
           slidesPerView: 3,
           spaceBetween: 45,
         },
-        1599: {
+        1600: {
           slidesPerView: 3,
           spaceBetween: 64,
         }

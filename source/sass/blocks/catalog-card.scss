@@ -1,5 +1,20 @@
 .catalog-card {
   position: relative;
+  width: 100%;
+  max-width: 464px;
+
+  @include vp-1599 {
+    max-width: 397px;
+  }
+
+  @include vp-1023 {
+    width: 334px;
+    max-width: unset;
+  }
+
+  @include vp-767 {
+    width: 280px;
+  }
 
   &--aside {
     .catalog-card__menu {
@@ -50,6 +65,23 @@
     max-height: 620px;
     overflow: hidden;
 
+    @include vp-1599 {
+      max-width: 397px;
+      max-height: 531px;
+    }
+
+    @include vp-1023 {
+      width: 334px;
+      max-width: unset;
+      height: 446px;
+      max-height: unset;
+    }
+
+    @include vp-767 {
+      width: 280px;
+      height: 374px;
+    }
+
     img {
       width: 100%;
       max-width: 464px;
@@ -57,6 +89,23 @@
       max-height: 620px;
 
       object-fit: cover;
+
+      @include vp-1599 {
+        max-width: 397px;
+        max-height: 531px;
+      }
+
+      @include vp-1023 {
+        width: 334px;
+        max-width: unset;
+        height: 446px;
+        max-height: unset;
+      }
+
+      @include vp-767 {
+        width: 280px;
+        height: 374px;
+      }
     }
   }
 

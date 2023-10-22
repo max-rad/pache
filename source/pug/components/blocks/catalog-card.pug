@@ -1,7 +1,7 @@
 mixin catalog-card(data)
   .catalog-card&attributes(attributes)
     a.catalog-card__link(href="#")
-    .catalog-card__image-wrapper
+    .catalog-card__image-wrapper(data-element-size)
       +img("content/goods", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
       .catalog-card__menu
         +size(data.sizes)

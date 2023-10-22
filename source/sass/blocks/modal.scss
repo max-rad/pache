@@ -111,4 +111,10 @@
 
     pointer-events: auto;
   }
+
+  &--add-to-basket {
+    .modal__close-button {
+      display: none;
+    }
+  }
 }
