@@ -8,6 +8,7 @@ import {initTabs} from './modules/tabs/init-tabs.js';
 import {initModals} from './modules/modals/init-modals.js';
 import {initMapSlider} from './modules/init-map-slider.js';
 import {initCompleteLookSlider} from './modules/init-complete-look-slider.js';
+import {initQuantityCounter} from './modules/init-quantity-counter.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -21,5 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initMapSlider();
     initCompleteLookSlider();
+    initQuantityCounter();
   });
 });

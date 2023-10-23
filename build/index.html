@@ -69,7 +69,7 @@
                   </svg>
                 </div>
                 <div class="main-nav__language"><span>EN</span></div>
-                <div class="main-nav__basket">
+                <div class="main-nav__basket" data-open-modal="basket">
                   <svg width="23" height="23" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#icon-basket"></use>
                   </svg>
@@ -1037,9 +1037,9 @@
               <div class="add-to-basket__image-wrapper"><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="267" height="333" alt="image">
               </div>
               <div class="add-to-basket__buttons">
-                <a class="btn add-to-basket__button" href="#">Перейти к&nbsp;оформлению
+                <a class="btn btn--small add-to-basket__button" href="#">Перейти к оформлению
                 </a>
-                <button class="btn btn--white" type="button" data-close-modal>Продолжить покупки
+                <button class="btn btn--small btn--white" type="button" data-close-modal>Продолжить покупки
                 </button>
               </div>
             </div>
@@ -1279,6 +1279,350 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal>
+            <svg width="21" height="21" aria-hidden="true">
+              <use xlink:href="/img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--complete-look" data-modal="complete-look">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="complete-look">
+            <h2 class="complete-look__title">Дополните образ</h2>
+            <div class="complete-look__slider swiper" data-swiper="complete-look">
+              <div class="complete-look__slides swiper-wrapper">
+                <div class="complete-look__slide swiper-slide">
+                  <div class="catalog-card"><a class="catalog-card__link" href="#"></a>
+                    <div class="catalog-card__image-wrapper" data-element-size><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="464" height="620" alt="image">
+                      <div class="catalog-card__menu">
+                        <div class="size">
+                          <ul class="size__list">
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XS</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">S</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">M</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">L</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XL</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="catalog-card__colors-list">
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#92b66f;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#8898b3;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#d9619c;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item">
+                          </li>
+                        </ul>
+                        <button class="btn-reset catalog-card__button" type="button" data-open-modal="add-to-basket">
+                          <svg width="28" height="28" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                          </svg>Купить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="catalog-card__title-wrapper">
+                      <div class="catalog-card__title">Топ с&nbsp;открытыми плечами из&nbsp;муслина</div>
+                      <div class="catalog-card__price">2&nbsp;500&nbsp;₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="complete-look__slide swiper-slide">
+                  <div class="catalog-card"><a class="catalog-card__link" href="#"></a>
+                    <div class="catalog-card__image-wrapper" data-element-size><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="464" height="620" alt="image">
+                      <div class="catalog-card__menu">
+                        <div class="size">
+                          <ul class="size__list">
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XS</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">S</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">M</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">L</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XL</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="catalog-card__colors-list">
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#92b66f;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#8898b3;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#d9619c;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__text">+ Цвета</span>
+                          </li>
+                        </ul>
+                        <button class="btn-reset catalog-card__button" type="button" data-open-modal="add-to-basket">
+                          <svg width="28" height="28" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                          </svg>Купить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="catalog-card__title-wrapper">
+                      <div class="catalog-card__title">Топ с&nbsp;открытыми плечами из&nbsp;муслина</div>
+                      <div class="catalog-card__price">2&nbsp;500&nbsp;₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="complete-look__slide swiper-slide">
+                  <div class="catalog-card"><a class="catalog-card__link" href="#"></a>
+                    <div class="catalog-card__image-wrapper" data-element-size><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="464" height="620" alt="image">
+                      <div class="catalog-card__menu">
+                        <div class="size">
+                          <ul class="size__list">
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XS</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">S</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">M</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">L</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XL</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="catalog-card__colors-list">
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#92b66f;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#8898b3;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#d9619c;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__text">+ Цвета</span>
+                          </li>
+                        </ul>
+                        <button class="btn-reset catalog-card__button" type="button" data-open-modal="add-to-basket">
+                          <svg width="28" height="28" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                          </svg>Купить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="catalog-card__title-wrapper">
+                      <div class="catalog-card__title">Топ с&nbsp;открытыми плечами из&nbsp;муслина</div>
+                      <div class="catalog-card__price">2&nbsp;500&nbsp;₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="complete-look__slide swiper-slide">
+                  <div class="catalog-card"><a class="catalog-card__link" href="#"></a>
+                    <div class="catalog-card__image-wrapper" data-element-size><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="464" height="620" alt="image">
+                      <div class="catalog-card__menu">
+                        <div class="size">
+                          <ul class="size__list">
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XS</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">S</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">M</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">L</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XL</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="catalog-card__colors-list">
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#92b66f;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#8898b3;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#d9619c;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__text">+ Цвета</span>
+                          </li>
+                        </ul>
+                        <button class="btn-reset catalog-card__button" type="button" data-open-modal="add-to-basket">
+                          <svg width="28" height="28" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                          </svg>Купить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="catalog-card__title-wrapper">
+                      <div class="catalog-card__title">Топ с&nbsp;открытыми плечами из&nbsp;муслина</div>
+                      <div class="catalog-card__price">2&nbsp;500&nbsp;₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="complete-look__slide swiper-slide">
+                  <div class="catalog-card"><a class="catalog-card__link" href="#"></a>
+                    <div class="catalog-card__image-wrapper" data-element-size><img src="img/content/goods/image-1.png" srcset="img/content/goods/image-1@2x.png 2x" width="464" height="620" alt="image">
+                      <div class="catalog-card__menu">
+                        <div class="size">
+                          <ul class="size__list">
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XS</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">S</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">M</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">L</button>
+                            </li>
+                            <li class="size__item">
+                              <button class="btn-reset size__button" type="button">XL</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <ul class="catalog-card__colors-list">
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#92b66f;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#8898b3;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__color" style="background-color :#d9619c;"></span>
+                          </li>
+                          <li class="catalog-card__colors-item"><span class="catalog-card__text">+ Цвета</span>
+                          </li>
+                        </ul>
+                        <button class="btn-reset catalog-card__button" type="button" data-open-modal="add-to-basket">
+                          <svg width="28" height="28" aria-hidden="true">
+                            <use xlink:href="/img/sprite.svg#icon-basket"></use>
+                          </svg>Купить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="catalog-card__title-wrapper">
+                      <div class="catalog-card__title">Топ с&nbsp;открытыми плечами из&nbsp;муслина</div>
+                      <div class="catalog-card__price">2&nbsp;500&nbsp;₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a class="btn complete-look__button" href="#">Перейти к оформлению
+            </a>
+          </div>
+          <button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal>
+            <svg width="21" height="21" aria-hidden="true">
+              <use xlink:href="/img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--basket" data-modal="basket">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Моя корзина</h2>
+          <div class="basket">
+            <ul class="basket__list">
+              <li class="basket__item">
+                <div class="basket-card basket-card--modal">
+                  <div class="basket-card__image-wrapper"><img src="img/content/basket-image-1.png" srcset="img/content/basket-image-1@2x.png 2x" width="100" height="128" alt="image">
+                  </div>
+                  <h2 class="basket-card__title">Слитый купальник на&nbsp;тонких бретелях</h2>
+                  <div class="basket-card__info">
+                    <p class="basket-card__price">2&nbsp;900&nbsp;₽</p>
+                    <div class="basket-card__parameters">
+                      <div class="basket-card__size-wrapper"><span class="basket-card__label">Размер:</span><span class="basket-card__size">S</span></div>
+                      <div class="basket-card__color-wrapper"><span class="basket-card__label">Цвет:</span><span class="basket-card__color" style="background-color :#292929;"></span></div>
+                    </div>
+                    <div class="basket-card__controls" data-counter>
+                      <div class="basket-card__quantity-counter">
+                        <button class="btn-reset basket-card__amount-button basket-card__amount-button--minus" type="button" data-counter-minus>-</button><span class="basket-card__amount" data-counter-amount>1</span>
+                        <button class="btn-reset basket-card__amount-button basket-card__amount-button--plus" type="button" data-counter-plus>+</button>
+                      </div>
+                      <button class="btn-reset basket-card__delete" type="button">
+                        <svg width="18" height="20" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="basket__item">
+                <div class="basket-card basket-card--modal">
+                  <div class="basket-card__image-wrapper"><img src="img/content/basket-image-2.png" srcset="img/content/basket-image-2@2x.png 2x" width="100" height="128" alt="image">
+                  </div>
+                  <h2 class="basket-card__title">Гофре лиф-топ на&nbsp;тонких бретелях</h2>
+                  <div class="basket-card__info">
+                    <p class="basket-card__price">2&nbsp;900&nbsp;₽</p>
+                    <div class="basket-card__parameters">
+                      <div class="basket-card__size-wrapper"><span class="basket-card__label">Размер:</span><span class="basket-card__size">M</span></div>
+                      <div class="basket-card__color-wrapper"><span class="basket-card__label">Цвет:</span><span class="basket-card__color basket-card__color--white" style="background-color :#ffffff;"></span></div>
+                    </div>
+                    <div class="basket-card__controls" data-counter>
+                      <div class="basket-card__quantity-counter">
+                        <button class="btn-reset basket-card__amount-button basket-card__amount-button--minus" type="button" data-counter-minus>-</button><span class="basket-card__amount" data-counter-amount>1</span>
+                        <button class="btn-reset basket-card__amount-button basket-card__amount-button--plus" type="button" data-counter-plus>+</button>
+                      </div>
+                      <button class="btn-reset basket-card__delete" type="button">
+                        <svg width="18" height="20" aria-hidden="true">
+                          <use xlink:href="/img/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="basket__total">
+              <p class="basket__label">Итого</p>
+              <p class="basket__price">5 800 ₽</p>
+            </div>
+            <div class="basket__buttons">
+              <a class="btn basket__button" href="#">Перейти к оформлению
+              </a>
+              <a class="btn btn--white" href="#">Продолжить покупки
+              </a>
+            </div>
+            <div class="basket__info">
+              <p class="basket__text">Добавьте ещё товаров на&nbsp;сумму 700&nbsp;₽ и&nbsp;получите бесплатную доставку</p>
+            </div>
+            <div class="basket__info basket__info--image">
+              <p class="basket__text">Добавьте ещё товаров на&nbsp;сумму 5&nbsp;700&nbsp;₽ и&nbsp;получите холщевую сумку в&nbsp;подарок</p>
+              <div class="basket__images">
+                <div class="basket__image-wrapper"><img src="img/content/canvas-bag-basket-1.png" srcset="img/content/canvas-bag-basket-1@2x.png 2x" width="149" height="156" alt="image">
+                </div>
+                <div class="basket__image-wrapper"><img src="img/content/canvas-bag-basket-2.png" srcset="img/content/canvas-bag-basket-2@2x.png 2x" width="149" height="156" alt="image">
+                </div>
               </div>
             </div>
           </div>

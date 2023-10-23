@@ -298,14 +298,7 @@ mixin card(data)
             h1.card__title Гофре. Лиф бандо на&nbsp;бретелях
             p.card__price 6&nbsp;900&nbsp;₽
             +size(["XS", "S", "M", "L", "XL"]).card__sizes
-            .card__colors(data-show-more="colors")
-              p.card__label Цвета
-              ul.card__colors-list
-                each item in colorsList
-                  li.card__color-item
-                    button(type="button" style={"background-color " : item} class={"card__color--white" : item === "#ffffff"}).btn-reset.card__color
-              .card__icon(data-show-more-button="colors")
-                +icon("icon-chevron-down", 12, 6)
+            +color(colorsList).card__colors
             +btn({type: "button", text: "Добавить в корзину"}).card__button
             .card__tabs(data-tabs="parent" data-height="max")
               .card__controls(data-tabs="controls")

@@ -1,16 +1,34 @@
-mixin basket-card(data)
-  .basket-card
+mixin basket-card(data, mod)
+  .basket-card(class=mod)
     .basket-card__image-wrapper
       +img("content", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
     h2.basket-card__title!=data.title
-    .basket-card__info
-      .basket-card__parameters
-        .basket-card__size-wrapper
-          span.basket-card__label Размер:
-          span.basket-card__size!=data.size
-        .basket-card__color-wrapper
-          span.basket-card__label Цвет:
-          span.basket-card__color(class={"basket-card__color--white" : data.color === "#ffffff"} style={"background-color " : data.color})
-      p.basket-card__price!=data.price
-      p.basket-card__quantity!=data.quantity
-      p.basket-card__total-price!=data.totalPrice
+    if (mod)
+      .basket-card__info
+        p.basket-card__price!=data.price
+        .basket-card__parameters
+          .basket-card__size-wrapper
+            span.basket-card__label Размер:
+            span.basket-card__size!=data.size
+          .basket-card__color-wrapper
+            span.basket-card__label Цвет:
+            span.basket-card__color(class={"basket-card__color--white" : data.color === "#ffffff"} style={"background-color " : data.color})
+        .basket-card__controls(data-counter)
+          .basket-card__quantity-counter
+            button(type="button" data-counter-minus).btn-reset.basket-card__amount-button.basket-card__amount-button--minus -
+            span.basket-card__amount(data-counter-amount) 1
+            button(type="button" data-counter-plus).btn-reset.basket-card__amount-button.basket-card__amount-button--plus +
+          button(type="button").btn-reset.basket-card__delete
+            +icon("icon-trash", 18, 20)
+    else
+      .basket-card__info
+        .basket-card__parameters
+          .basket-card__size-wrapper
+            span.basket-card__label Размер:
+            span.basket-card__size!=data.size
+          .basket-card__color-wrapper
+            span.basket-card__label Цвет:
+            span.basket-card__color(class={"basket-card__color--white" : data.color === "#ffffff"} style={"background-color " : data.color})
+        p.basket-card__price!=data.price
+        p.basket-card__quantity!=data.quantity
+        p.basket-card__total-price!=data.totalPrice
