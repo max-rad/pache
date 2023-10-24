@@ -10,7 +10,7 @@
  * Released on: September 28, 2023
  */
 
-export var Swiper = (function () {
+var Swiper = (function () {
   'use strict';
 
   /**

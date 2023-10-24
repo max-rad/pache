@@ -1,5 +1,6 @@
+import {Swiper} from 'swiper';
+import {Navigation, Pagination} from 'swiper/modules';
 import {initElementSizeObserver} from '../utils/element-size-observer';
-import {Swiper} from '../vendor/swiper-bundle';
 
 const initGoodsSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="goods"]');
@@ -12,6 +13,7 @@ const initGoodsSlider = () => {
     initElementSizeObserver(slider);
 
     const swiper = new Swiper(slider, {
+      modules: [Navigation, Pagination],
       slidesPerView: 3,
       spaceBetween: 64,
       pagination: {

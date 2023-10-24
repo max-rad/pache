@@ -1,4 +1,5 @@
-import {Swiper} from '../vendor/swiper-bundle.js';
+import {Swiper} from 'swiper';
+import {Pagination} from 'swiper/modules';
 
 const initIntroSlider = () => {
   const slider = document.querySelector('[data-swiper="intro"]');
@@ -8,6 +9,7 @@ const initIntroSlider = () => {
   }
 
   const swiper = new Swiper(slider, {
+    modules: [Pagination],
     slidesPerView: 1,
     loop: true,
     pagination: {
