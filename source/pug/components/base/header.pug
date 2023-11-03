@@ -80,10 +80,10 @@ mixin header(headerMods, currentUrl)
                             a.main-nav__sublink(href=subitem.href)!=subitem.text
             +search().main-nav__search
           .main-nav__user-nav
-            .main-nav__account
+            a(href="#").btn-reset.main-nav__account
               +icon("icon-account", 23, 22)
-            .main-nav__language
+            a(href="#").btn-reset.main-nav__language
               span EN
-            .main-nav__basket(data-open-modal="basket")
+            a(href="#" data-open-modal="basket").btn-reset.main-nav__basket
               +icon("icon-basket", 23, 23)
 

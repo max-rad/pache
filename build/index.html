@@ -62,19 +62,13 @@
                   </form>
                 </div>
               </div>
-              <div class="main-nav__user-nav">
-                <div class="main-nav__account">
+              <div class="main-nav__user-nav"><a class="btn-reset main-nav__account" href="#">
                   <svg width="23" height="22" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#icon-account"></use>
-                  </svg>
-                </div>
-                <div class="main-nav__language"><span>EN</span></div>
-                <div class="main-nav__basket" data-open-modal="basket">
+                  </svg></a><a class="btn-reset main-nav__language" href="#"><span>EN</span></a><a class="btn-reset main-nav__basket" href="#" data-open-modal="basket">
                   <svg width="23" height="23" aria-hidden="true">
                     <use xlink:href="/img/sprite.svg#icon-basket"></use>
-                  </svg>
-                </div>
-              </div>
+                  </svg></a></div>
             </nav>
           </div>
         </div>
@@ -82,8 +76,11 @@
       <main>
         <section class="intro">
           <h1 class="visually-hidden">Интернет-магазин женского нижнего белья и купальников - ПАЧЕ</h1>
-          <div class="intro__video">
-            <video src="" autoplay loop muted></video>
+          <div class="intro__video intro__video--desktop">
+            <video src="video/video-desktop.mp4" width="1920px" height="1080px" autoplay loop muted></video>
+          </div>
+          <div class="intro__video intro__video--mobile">
+            <video src="video/video-mobile.mp4" width="1920px" height="1080px" autoplay loop muted></video>
           </div>
           <div class="intro__slider swiper" data-swiper="intro">
             <div class="intro__slides swiper-wrapper">
@@ -387,8 +384,8 @@
               <div class="promo__info-wrapper">
                 <h3 class="promo__label">-20% на&nbsp;нижнее белье</h3>
                 <p class="promo__description">Скидка действует при покупке двух комплектов</p>
-                <button class="btn" type="button">Купить
-                </button>
+                <a class="btn" href="#">Купить
+                </a>
               </div>
             </li>
             <li class="promo__item">
@@ -397,8 +394,8 @@
               <div class="promo__info-wrapper">
                 <h3 class="promo__label">-10% на&nbsp;весь чек</h3>
                 <p class="promo__description">При покупке купальника и&nbsp;любого изделия из&nbsp;сетки</p>
-                <button class="btn" type="button">Купить
-                </button>
+                <a class="btn" href="#">Купить
+                </a>
               </div>
             </li>
           </ul>
