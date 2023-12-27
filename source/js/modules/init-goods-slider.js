@@ -1,7 +1,3 @@
-import {Swiper} from 'swiper';
-import {Navigation, Pagination} from 'swiper/modules';
-import {initElementSizeObserver} from '../utils/element-size-observer';
-
 const initGoodsSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="goods"]');
 
@@ -10,19 +6,15 @@ const initGoodsSlider = () => {
   }
 
   sliders.forEach((slider) => {
-    initElementSizeObserver(slider);
+    const buttonNext = slider.querySelector('[data-button-next="goods"]');
+    const buttonPrev = slider.querySelector('[data-button-prev="goods"]');
 
     const swiper = new Swiper(slider, {
-      modules: [Navigation, Pagination],
       slidesPerView: 3,
       spaceBetween: 64,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: buttonNext,
+        prevEl: buttonPrev,
       },
       breakpoints: {
         320: {

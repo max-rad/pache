@@ -1,5 +1,3 @@
-import {Swiper} from 'swiper';
-import {Navigation, Pagination} from 'swiper/modules';
 import { initElementSizeObserver } from '../utils/element-size-observer';
 
 const initCompleteLookSlider = () => {
@@ -13,7 +11,6 @@ const initCompleteLookSlider = () => {
     initElementSizeObserver(slider);
 
     const swiper = new Swiper(slider, {
-      modules: [Navigation, Pagination],
       slidesPerView: 2,
       spaceBetween: 20,
       pagination: {

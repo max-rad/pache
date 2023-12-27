@@ -1,7 +1,10 @@
 .size {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
     margin: 0;
     padding: 0;
 
@@ -9,10 +12,10 @@
   }
 
   &__item {
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 0;
+    &.selected {
+      .size__button {
+        background-color: $color-nobel;
+      }
     }
   }
 
@@ -22,7 +25,9 @@
     align-items: center;
     flex-shrink: 0;
 
-    width: 24px;
+    width: 100%;
+    min-width: 24px;
+    padding: 2px 4px;
 
     font-weight: 400;
     font-size: 12px;
