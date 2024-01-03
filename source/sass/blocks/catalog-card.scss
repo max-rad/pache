@@ -63,6 +63,7 @@
     max-width: 464px;
     height: 100%;
     max-height: 620px;
+    padding-top: 133.7%;
     overflow: hidden;
 
     @include vp-1599 {
@@ -107,6 +108,23 @@
         height: 374px;
       }
     }
+  }
+
+  &__image-slider {
+
+  }
+
+  &__image-slide {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__menu {

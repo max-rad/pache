@@ -2346,6 +2346,7 @@ button,
   max-width: 464px;
   height: 100%;
   max-height: 620px;
+  padding-top: 133.7%;
   overflow: hidden;
 }
 
@@ -2356,6 +2357,17 @@ button,
   max-height: 620px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.catalog-card__image-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .catalog-card__menu {

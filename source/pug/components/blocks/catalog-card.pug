@@ -2,7 +2,10 @@ mixin catalog-card(data)
   .catalog-card&attributes(attributes)
     a.catalog-card__link(href="#")
     .catalog-card__image-wrapper(data-element-size)
-      +img("content/goods", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+      .catalog-card__image-slider
+        .catalog-card__image-slide(style={"background-image" : `url(../${data.href})`})
+      .catalog-card__image(style={"background-image" : `url(../${data.href})`})
+      //- +img("content/goods", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
       .catalog-card__menu
         +size(data.sizes)
         ul.catalog-card__colors-list
