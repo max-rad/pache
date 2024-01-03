@@ -1,5 +1,3 @@
-import {Swiper} from '../vendor/swiper-bundle.js';
-
 const initMapSlider = () => {
   const slider = document.querySelector('[data-swiper="map"]');
 

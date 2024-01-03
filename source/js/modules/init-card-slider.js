@@ -1,5 +1,3 @@
-import {Swiper} from '../vendor/swiper-bundle';
-
 const slider = document.querySelector('[data-swiper="card"]');
 const breakpointMedia = window.matchMedia('(max-width: 767px)');
 

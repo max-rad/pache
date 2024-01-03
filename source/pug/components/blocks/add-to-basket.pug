@@ -1,4 +1,169 @@
 mixin add-to-basket()
+  -
+    const data = {
+      list: [
+        {
+          image: {
+            src: "image-1",
+            format: "png",
+            width: "464",
+            height: "620",
+            alt: "image"
+          },
+          title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+          price: "2&nbsp;500&nbsp;₽",
+          sizes: [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          colors: [
+            {
+              color: "#92b66f"
+            },
+            {
+              color: "#8898b3"
+            },
+            {
+              color: "#d9619c"
+            },
+            {
+            }
+          ]
+        },
+        {
+          image: {
+            src: "image-1",
+            format: "png",
+            width: "464",
+            height: "620",
+            alt: "image"
+          },
+          title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+          price: "2&nbsp;500&nbsp;₽",
+          sizes: [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          colors: [
+            {
+              color: "#92b66f"
+            },
+            {
+              color: "#8898b3"
+            },
+            {
+              color: "#d9619c"
+            },
+            {
+              text: "+ Цвета"
+            }
+          ]
+        },
+        {
+          image: {
+            src: "image-1",
+            format: "png",
+            width: "464",
+            height: "620",
+            alt: "image"
+          },
+          title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+          price: "2&nbsp;500&nbsp;₽",
+          sizes: [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          colors: [
+            {
+              color: "#92b66f"
+            },
+            {
+              color: "#8898b3"
+            },
+            {
+              color: "#d9619c"
+            },
+            {
+              text: "+ Цвета"
+            }
+          ]
+        },
+        {
+          image: {
+            src: "image-1",
+            format: "png",
+            width: "464",
+            height: "620",
+            alt: "image"
+          },
+          title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+          price: "2&nbsp;500&nbsp;₽",
+          sizes: [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          colors: [
+            {
+              color: "#92b66f"
+            },
+            {
+              color: "#8898b3"
+            },
+            {
+              color: "#d9619c"
+            },
+            {
+              text: "+ Цвета"
+            }
+          ]
+        },
+        {
+          image: {
+            src: "image-1",
+            format: "png",
+            width: "464",
+            height: "620",
+            alt: "image"
+          },
+          title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+          price: "2&nbsp;500&nbsp;₽",
+          sizes: [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          colors: [
+            {
+              color: "#92b66f"
+            },
+            {
+              color: "#8898b3"
+            },
+            {
+              color: "#d9619c"
+            },
+            {
+              text: "+ Цвета"
+            }
+          ]
+        }
+      ]
+    }
+
   .add-to-basket
     h2.add-to-basket__title Товар
       =" "
@@ -9,6 +174,6 @@ mixin add-to-basket()
       .add-to-basket__image-wrapper
         +img("content/goods", "image-1", "png", 267, 333, "image")
       .add-to-basket__buttons
-        +btn({href: "#", text: "Перейти к&nbsp;оформлению"}).add-to-basket__button
-        +btn({type: "button", text: "Продолжить покупки"})(data-close-modal).btn--white
-    +complete-look()
+        +btn({href: "#", text: "Перейти к оформлению"}).btn--small.add-to-basket__button
+        +btn({type: "button", text: "Продолжить покупки"})(data-close-modal).btn--small.btn--white
+    +complete-look(data)

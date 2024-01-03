@@ -1,5 +1,3 @@
-import {Swiper} from '../vendor/swiper-bundle.js';
-
 const initIntroSlider = () => {
   const slider = document.querySelector('[data-swiper="intro"]');
 

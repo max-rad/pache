@@ -28,7 +28,7 @@ block main
             title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
             price: "2&nbsp;500&nbsp;₽",
             sizes: [
-              "XS",
+              "XS-S",
               "S",
               "M",
               "L",
@@ -530,3 +530,7 @@ block main
 block modals
   +modal("modal--add-to-basket")(data-modal="add-to-basket")
     +add-to-basket()
+  +modal("modal--complete-look")(data-modal="complete-look")
+    +complete-look-modal()
+  +modal("modal--basket")(data-modal="basket")
+    +basket()

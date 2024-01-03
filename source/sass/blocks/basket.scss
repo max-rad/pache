@@ -1,0 +1,150 @@
+.basket {
+  &__list {
+    max-height: 334px;
+    margin: 0 0 20px;
+    padding: 0;
+    overflow: auto;
+
+    list-style: none;
+
+    @include vp-639 {
+      max-height: 414px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-light-gray;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px;
+  }
+
+  &__label {
+    margin: 0 20px 0 0;
+
+    font-weight: 400;
+    font-size: 16;
+    line-height: normal;
+  }
+
+  &__price {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16;
+    line-height: normal;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 19px;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 0 20px 0 20px;
+
+    @include vp-767 {
+      padding: 14px;
+    }
+
+    &--image {
+      margin-top: 10px;
+
+      border-radius: 20px 0 20px 0;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    margin-top: 20px;
+
+    @include vp-767 {
+      margin-top: 15px;
+    }
+  }
+
+  &__image-wrapper {
+    width: 149px;
+    height: 156px;
+    margin-right: 20px;
+
+    border-radius: 0 20px 0 20px;
+
+    @include vp-767 {
+      width: 119px;
+      height: 156px;
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 149px;
+      height: 156px;
+
+      border-radius: 0 20px 0 20px;
+
+      object-fit: cover;
+
+      @include vp-767 {
+        width: 119px;
+        height: 156px;
+      }
+    }
+  }
+}

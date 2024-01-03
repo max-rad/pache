@@ -7,6 +7,6 @@ mixin goods(data)
           each item in data.list
             .goods__slide.swiper-slide
               +catalog-card(item)
-        .swiper-button-next
-        .swiper-button-prev
+        .swiper-button-next(data-button-next="goods")
+        .swiper-button-prev(data-button-prev="goods")
         .swiper-pagination

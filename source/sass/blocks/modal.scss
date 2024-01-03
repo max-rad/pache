@@ -40,7 +40,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-767 {
+    @include vp-1023 {
       padding: 60px 0;
     }
   }
@@ -66,6 +66,11 @@
     border-radius: 10px;
     background-color: $color-default-white;
 
+    @include vp-1023 {
+      width: 100%;
+      padding: 30px 40px;
+    }
+
     @include vp-767 {
       padding: 30px 20px;
     }
@@ -89,15 +94,20 @@
     z-index: 1;
     position: absolute;
 
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 40px;
 
-    width: 26px;
-    height: 26px;
+    width: 21px;
+    height: 21px;
 
     cursor: pointer;
 
     transition: opacity $trans-default;
+
+    @include vp-767 {
+      top: 40px;
+      right: 20px;
+    }
 
     @include hover-focus {
       opacity: 0.8;
@@ -115,6 +125,85 @@
   &--add-to-basket {
     .modal__close-button {
       display: none;
+    }
+  }
+
+  &--complete-look {
+    .modal__content {
+      padding: 50px 40px;
+
+      @include vp-1023 {
+        padding: 50px 40px;
+      }
+
+      @include vp-767 {
+        padding: 40px 20px;
+      }
+    }
+  }
+
+  &--basket {
+    transform: none;
+
+    .modal__wrapper {
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 0;
+
+      @include vp-1023 {
+        padding: 0;
+      }
+    }
+
+    .modal__content {
+      width: 608px;
+      height: 100%;
+      padding: 30px 50px;
+
+      border-radius: 0;
+
+      transition: visibility $trans-default, opacity $trans-default, transform $trans-default;
+
+      visibility: hidden;
+      opacity: 0;
+
+      transform: translateX(100%);
+
+      @include vp-1599 {
+        width: 568px;
+      }
+
+      @include vp-1023 {
+        width: 438px;
+        padding: 30px 40px;
+      }
+
+      @include vp-767 {
+        width: 100%;
+        padding: 30px 20px;
+      }
+    }
+
+    .modal__close-button {
+      top: 30px;
+      right: 20px;
+
+      @include vp-767 {
+        top: 30px;
+        right: 20px;
+      }
+    }
+
+
+    &.is-active {
+      transform: none;
+
+      .modal__content {
+        visibility: visible;
+        opacity: 1;
+
+        transform: translateX(0);
+      }
     }
   }
 }

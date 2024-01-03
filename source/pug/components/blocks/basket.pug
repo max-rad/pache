@@ -1,0 +1,57 @@
+mixin basket()
+  -
+    const list = [
+      {
+        image: {
+          src: "basket-image-1",
+          format: "png",
+          width: "100",
+          height: "128",
+          alt: "image"
+        },
+        title: "Слитый купальник на&nbsp;тонких бретелях",
+        size: "S",
+        price: "2&nbsp;900&nbsp;₽",
+        quantity: "1&nbsp;шт",
+        totalPrice: "2&nbsp;900&nbsp;₽",
+        color: "#292929"
+      },
+      {
+        image: {
+          src: "basket-image-2",
+          format: "png",
+          width: "100",
+          height: "128",
+          alt: "image"
+        },
+        title: "Гофре лиф-топ на&nbsp;тонких бретелях",
+        size: "M",
+        price: "2&nbsp;900&nbsp;₽",
+        quantity: "1&nbsp;шт",
+        totalPrice: "2&nbsp;900&nbsp;₽",
+        color: "#ffffff"
+      }
+    ]
+
+  h2.modal__title Моя корзина
+  .basket
+    ul.basket__list
+      each item in list
+        li.basket__item
+          +basket-card(item, "basket-card--modal")
+    .basket__total
+      p.basket__label Итого
+      p.basket__price 5 800 ₽
+    .basket__buttons
+      +btn({href: "#", text: "Перейти к оформлению"}).basket__button
+      +btn({href: "#", text: "Продолжить покупки"}).btn--white
+    .basket__info
+      p.basket__text Добавьте ещё товаров на&nbsp;сумму 700&nbsp;₽ и&nbsp;получите бесплатную доставку
+    .basket__info.basket__info--image
+      p.basket__text Добавьте ещё товаров на&nbsp;сумму 5&nbsp;700&nbsp;₽ и&nbsp;получите холщевую сумку в&nbsp;подарок
+      .basket__images
+        .basket__image-wrapper
+          +img("content", "canvas-bag-basket-1", "png", 149, 156, "image")
+        .basket__image-wrapper
+          +img("content", "canvas-bag-basket-2", "png", 149, 156, "image")
+

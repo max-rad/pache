@@ -1,5 +1,4 @@
 import { initElementSizeObserver } from '../utils/element-size-observer';
-import {Swiper} from '../vendor/swiper-bundle';
 
 const initCompleteLookSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="complete-look"]');

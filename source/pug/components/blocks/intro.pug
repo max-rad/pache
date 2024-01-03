@@ -1,8 +1,10 @@
 mixin intro()
   section.intro
     h1.visually-hidden Интернет-магазин женского нижнего белья и купальников - ПАЧЕ
-    .intro__video
-      video(src="" autoplay loop muted)
+    .intro__video.intro__video--desktop
+      video(src="video/video-desktop.mp4" width="1920px" height="1080px" autoplay loop muted)
+    .intro__video.intro__video--mobile
+      video(src="video/video-mobile.mp4" width="1920px" height="1080px" autoplay loop muted)
     .intro__slider.swiper(data-swiper="intro")
       .intro__slides.swiper-wrapper
         .intro__slide.swiper-slide
