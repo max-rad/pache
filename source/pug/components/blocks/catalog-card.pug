@@ -29,7 +29,9 @@ mixin catalog-card(data)
 
     .catalog-card__title-wrapper
       .catalog-card__title!=data.title
-      .catalog-card__price!=data.price
+      .catalog-card__price-wrapper
+        p.catalog-card__old-price 1000
+        p.catalog-card__price!=data.price
 
 
 
