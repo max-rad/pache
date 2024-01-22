@@ -299,7 +299,9 @@ mixin card(data)
             p.card__price 6&nbsp;900&nbsp;₽
             +size(["XS", "S", "M", "L", "XL"]).card__sizes
             +color(colorsList).card__colors
-            +btn({type: "button", text: "Добавить в корзину"}).card__button
+            .card__button-wrapper
+              +btn({type: "button", text: "Добавить в корзину"}).card__button
+              p.card__attention На&nbsp;пошив данного изделия потребуется от&nbsp;10&nbsp;рабочих дней
             .card__tabs(data-tabs="parent" data-height="max")
               .card__controls(data-tabs="controls")
                 button(type="button" data-tabs="control").btn-reset.card__control.is-active Описание

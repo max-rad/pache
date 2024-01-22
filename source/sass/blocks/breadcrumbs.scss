@@ -2,7 +2,11 @@
   display: flex;
   align-items: center;
 
-  &__link {
+  @include vp-767 {
+    align-items: flex-start;
+  }
+
+  &__return {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,26 +27,35 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
+    display: inline;
 
     margin: 0;
     padding: 0;
 
     list-style: none;
+
+    @include vp-767 {
+      padding: 5px 0 0;
+    }
   }
 
   &__item {
     position: relative;
+    display: inline;
 
     &::after {
-      content: "\00a0\2014\0020";
+      content: "\00a0\2014";
+      margin: 0 4px;
 
       font-weight: 400;
       font-size: 14px;
-      line-height: 19px;
+      line-height: 18px;
 
       color: $color-silver;
+
+      @include vp-767 {
+        font-size: 13px;
+      }
     }
 
     &:last-child::after {
@@ -50,10 +63,10 @@
     }
   }
 
-  &__text {
+  &__link {
     font-weight: 400;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 18px;
 
     color: $color-silver;
 

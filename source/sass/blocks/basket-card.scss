@@ -29,11 +29,6 @@
     .basket-card__info {
       flex-direction: column;
       justify-content: flex-end;
-      padding-right: 20px;
-
-      @include vp-639 {
-        padding-right: 30px;
-      }
     }
 
     .basket-card__parameters {
@@ -265,6 +260,7 @@
     width: 112px;
     height: 28px;
     margin-right: 20px;
+    padding: 0;
     overflow: hidden;
 
     border: 1px solid $color-light-gray;
@@ -299,34 +295,32 @@
     @include hover-focus {
       background-color: $color-light-gray;
     }
-
-    &--minus {
-
-    }
-
-    &--plus {
-
-    }
   }
 
   &__amount {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-
-    color: $color-nero;
 
     border-right: 1px solid $color-light-gray;
     border-left: 1px solid $color-light-gray;
 
-    @include vp-639 {
-      font-size: 14px;
-      line-height: 18px;
+    input {
+      width: 100%;
+      padding: 0;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+
+      border: none;
+      color: $color-nero;
+
+      @include vp-639 {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 

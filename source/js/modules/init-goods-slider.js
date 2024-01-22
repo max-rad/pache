@@ -1,3 +1,5 @@
+import {initElementSizeObserver} from '../utils/element-size-observer';
+
 const initGoodsSlider = () => {
   const sliders = document.querySelectorAll('[data-swiper="goods"]');
 
@@ -6,6 +8,8 @@ const initGoodsSlider = () => {
   }
 
   sliders.forEach((slider) => {
+    initElementSizeObserver(slider);
+
     const buttonNext = slider.querySelector('[data-button-next="goods"]');
     const buttonPrev = slider.querySelector('[data-button-prev="goods"]');
 

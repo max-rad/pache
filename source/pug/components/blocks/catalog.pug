@@ -35,18 +35,18 @@ mixin catalog()
           "XL"
         ],
         colors: [
-          {
-            color: "#92b66f"
-          },
-          {
-            color: "#8898b3"
-          },
-          {
-            color: "#d9619c"
-          },
-          {
-            text: "+ Цвета"
-          }
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
         ]
       },
       {
@@ -67,18 +67,18 @@ mixin catalog()
           "XL"
         ],
         colors: [
-          {
-            color: "#92b66f"
-          },
-          {
-            color: "#8898b3"
-          },
-          {
-            color: "#d9619c"
-          },
-          {
-            text: "+ Цвета"
-          }
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
         ]
       },
       {
@@ -99,18 +99,18 @@ mixin catalog()
           "XL"
         ],
         colors: [
-          {
-            color: "#92b66f"
-          },
-          {
-            color: "#8898b3"
-          },
-          {
-            color: "#d9619c"
-          },
-          {
-            text: "+ Цвета"
-          }
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
         ]
       },
       {
@@ -131,18 +131,18 @@ mixin catalog()
           "XL"
         ],
         colors: [
-          {
-            color: "#92b66f"
-          },
-          {
-            color: "#8898b3"
-          },
-          {
-            color: "#d9619c"
-          },
-          {
-            text: "+ Цвета"
-          }
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
         ]
       },
       {
@@ -163,33 +163,38 @@ mixin catalog()
           "XL"
         ],
         colors: [
-          {
-            color: "#92b66f"
-          },
-          {
-            color: "#8898b3"
-          },
-          {
-            color: "#d9619c"
-          },
-          {
-            text: "+ Цвета"
-          }
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
         ]
       }
     ]
 
   section.catalog
     .container
-      +breadcrumbs({
-        href: "index.html",
-        text: "Главная&nbsp;&mdash; Купальники"
-      })
+      +breadcrumbs([
+        {
+          href: "#",
+          text: "Главная"
+        },
+        {
+          href: "#",
+          text: "Купальники"
+        },
+        {
+          href: "#",
+          text: "Гофре, Лиф бандо на тонких бретелях"
+        }
+      ])
       .catalog__wrapper
         .catalog__title-wrapper
           h1.catalog__title Купальники
           .catalog__filter
-            +color(colorsList).catalog__colors
+            +color(colorsList).color--filter.catalog__colors
             .catalog__type
               button(type="button").btn-reset.catalog__button Лифы
               button(type="button").btn-reset.catalog__button Плавки

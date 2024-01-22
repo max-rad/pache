@@ -1,4 +1,18 @@
 .size {
+  &--card {
+    .size__list {
+      @include vp-1023 {
+        column-gap: 20px;
+      }
+    }
+  }
+
+  &--gift {
+    .size__list {
+      column-gap: 20px;
+    }
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;

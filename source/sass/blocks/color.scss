@@ -1,8 +1,94 @@
 .color {
+  position: relative;
   display: flex;
-  max-height: 26px;
-  padding: 3px 0;
+  max-height: 56px;
+  padding: 30px 0 0;
+
   overflow: hidden;
+
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $color-nero;
+
+    opacity: 0;
+
+    transition: opacity $trans-default;
+  }
+
+  &--filter {
+    max-height: 26px;
+    padding: 0;
+  }
+
+  &--card {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    position: static;
+    max-height: unset;
+    padding: 0;
+
+    overflow: visible;
+
+    @include vp-1023 {
+      position: relative;
+      max-height: 56px;
+      padding: 30px 0 0;
+
+      overflow: hidden;
+    }
+
+    .color__list {
+      @include vp-1023 {
+        column-gap: 24px;
+      }
+    }
+
+    [data-tooltip]::after {
+      top: unset;
+      right: 30px;
+      bottom: 5px;
+      left: unset;
+
+      pointer-events: none;
+
+      @include vp-1199 {
+        right: 20px;
+      }
+
+      @include vp-1023 {
+        top: 0;
+        right: unset;
+        bottom: unset;
+        left: 0;
+      }
+    }
+
+    .color__icon {
+      display: none;
+
+      @include vp-1023 {
+        display: flex;
+      }
+    }
+  }
+
+  &--gift {
+    max-height: 56px;
+    padding: 30px 0 0;
+
+    .color__list {
+      column-gap: 24px;
+    }
+  }
 
   &.is-active {
     max-height: unset;
@@ -42,6 +128,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.selected {
+      .color__color {
+        border: 1px solid $color-nero;
+      }
+
+      [data-tooltip]::after {
+        opacity: 1;
+      }
+    }
   }
 
   &__button {
@@ -57,14 +153,6 @@
 
     &--white {
       border: 1px solid $color-silver;
-    }
-
-    &.is-active {
-      box-shadow: 0 0 0 3px $color-silver;
-
-      .color__button--white {
-        border: none;
-      }
     }
   }
 

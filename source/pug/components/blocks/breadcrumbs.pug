@@ -1,5 +1,8 @@
-mixin breadcrumbs(data)
+mixin breadcrumbs(list)
   .breadcrumbs
-    a.breadcrumbs__link(href=data.href aria-label="Вернуться назад")
+    a.breadcrumbs__return(href="#" aria-label="Вернуться назад")
       +icon("icon-arrow-back", 32, 29)
-    p.breadcrumbs__text!=data.text
+    ul.breadcrumbs__list
+      each item in list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(class={"is-active" : item.isActive} href=item.href)!=item.text

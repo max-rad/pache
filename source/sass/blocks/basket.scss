@@ -56,18 +56,49 @@
     line-height: normal;
   }
 
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__old-price {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    text-decoration: line-through;
+
+    color: $color-grey;
+  }
+
   &__price {
     margin: 0;
 
     font-weight: 400;
-    font-size: 16;
+    font-size: 16px;
     line-height: normal;
+
+    color: $color-nero;
+  }
+
+  &__difference-price {
+    margin: 0;
+    padding: 5px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+
+    background-color: $color-nero;
+    color: $color-default-white;
   }
 
   &__buttons {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
   }
 
   &__button {
@@ -78,6 +109,7 @@
     display: flex;
     flex-direction: column;
 
+    margin: 30px 0 0;
     padding: 19px;
 
     border: 1px solid $color-light-gray;
@@ -104,6 +136,25 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 21px;
+    }
+  }
+
+  &__gifts-wrapper {
+    margin: 30px 0 0;
+  }
+
+  &__gifts {
+    margin: 25px 0 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__gift {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

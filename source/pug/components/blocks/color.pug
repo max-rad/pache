@@ -1,9 +1,10 @@
 mixin color(data)
   .color(data-show-more="colors")&attributes(attributes)
-    p.color__label Цвета
+    if (data.label)
+      p.color__label Цвета
     ul.color__list
       each item in data
         li.color__item
-          button(type="button" style={"background-color " : item} class={"color__button--white" : item === "#ffffff"}).btn-reset.color__button
+          button(type="button" data-tooltip=item style={"background-color " : item} class={"color__button--white" : item === "#ffffff"}).btn-reset.color__button
     .color__icon(data-show-more-button="colors")
       +icon("icon-chevron-down", 12, 6)

@@ -1,0 +1,19 @@
+mixin gift-card(data)
+  .gift-card&attributes(attributes)
+    a.gift-card__link(href="#")
+    .gift-card__image-wrapper(data-element-size)
+      .gift-card__image-slides
+        .gift-card__image-slide(style={"background-image " : "url(../img/content/goods/image-1.png);"})
+      .gift-card__image(style={"background-image " : "url(../img/content/goods/image-1.png);"})
+    .gift-card__info-wrapper
+      .gift-card__menu
+        +size(data.sizes).size--gift.gift-card__size
+        +color(data.colors).color--gift
+        .gift-card__button-wrapper
+          button(type="button" data-open-modal="add-to-basket").btn-reset.gift-card__button
+            +icon("icon-basket", 28, 28)
+            | Купить
+      .gift-card__title-wrapper
+        .gift-card__title!=data.title
+        .gift-card__price-wrapper
+          p.gift-card__price!=data.price
