@@ -16,9 +16,15 @@ const initGoodsSlider = () => {
     const swiper = new Swiper(slider, {
       slidesPerView: 3,
       spaceBetween: 64,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        hiddenClass: '.swiper-pagination-hidden',
+      },
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,
+        hiddenClass: '.swiper-button-hidden',
       },
       breakpoints: {
         320: {

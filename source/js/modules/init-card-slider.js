@@ -21,6 +21,7 @@ const initSwiper = () => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      hiddenClass: '.swiper-pagination-hidden',
     },
   });
 }

@@ -1,0 +1,69 @@
+mixin single-stories()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "730",
+          height: "900",
+          alt: "image"
+        }
+      },
+      {
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "730",
+          height: "900",
+          alt: "image"
+        }
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "730",
+          height: "900",
+          alt: "image"
+        }
+      },
+      {
+        image: {
+          src: "image-4",
+          format: "webp",
+          width: "730",
+          height: "900",
+          alt: "image"
+        }
+      }
+    ]
+
+  section.single-stories
+    .container
+      +breadcrumbs([
+        {
+          href: "#",
+          text: "Главная"
+        },
+        {
+          href: "#",
+          text: "Истории"
+        },
+        {
+          href: "#",
+          text: "Камерная новогодняя встреча",
+          isActive: true
+        }
+      ])
+      .single-stories__wrapper
+        .single-stories__info
+          h1.single-stories__title Камерная новогодняя встреча
+          p.single-stories__description В&nbsp;выходные у&nbsp;нас состоялась камерная новогодняя встреча для близких друзей бренда П&Aacute;ЧЕ❤️ Провели этот день в&nbsp;прекрасном, новом концептуальном пространстве в&nbsp;окружении искусства Rhyme. Сделали свечи в&nbsp;ракушках с&nbsp;пожеланиями, обсудили планы на&nbsp;будущий год и&nbsp;прекрасно провели время! Спасибо большое всем, кто был с&nbsp;нами! Особая благодарность @rhyme.team, @rhyme.collect, @oliamacalik❤️
+          p.single-stories__date 12.2023
+        ul.single-stories__list
+          each item in list
+            li.single-stories__item
+              .single-stories__image-wrapper
+                +img("content/single-stories", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+

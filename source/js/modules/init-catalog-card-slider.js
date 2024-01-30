@@ -15,6 +15,7 @@ const initCatalogCardSlider = () => {
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,
+        hiddenClass: '.swiper-button-hidden',
       },
     });
   });

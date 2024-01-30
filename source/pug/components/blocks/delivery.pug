@@ -1,0 +1,157 @@
+mixin delivery()
+  section.delivery
+    .container
+      +breadcrumbs([
+        {
+          href: "#",
+          text: "Главная"
+        },
+        {
+          href: "#",
+          text: "Оплата и&nbsp;доставка",
+          isActive: true
+        }
+      ])
+      .delivery__wrapper
+        h1.visually-hidden Оплата и&nbsp;доставка
+        .delivery__main
+          .delivery__block
+            h2.delivery__title Оплата
+            .delivery__accordion(data-accordion="parent")
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Оплата по&nbsp;частям с&nbsp;Подели
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Подели&nbsp;&mdash; абсолютно бесплатный сервис оплаты покупок по&nbsp;частям.
+                    p Сегодня оплачивайте только&nbsp;25% стоимости покупки, остальное&nbsp;&mdash; тремя платежами раз в&nbsp;2&nbsp;недели.
+                    p Это не&nbsp;кредит, никаких дополнительных платежей и&nbsp;процентов&nbsp;&mdash; как обычная оплата картой!
+                    p Как купить? Всё просто:
+                    p &mdash;&nbsp;Выберите Подели в&nbsp;способах оплаты в&nbsp;корзине;
+                    p &mdash;&nbsp;Заполните короткую анкету;
+                    p &mdash;&nbsp;Оплатите&nbsp;25% стоимости и&nbsp;покупка уже ваша!
+                    p &mdash;&nbsp;Остальные три части будут списываться с&nbsp;вашей банковской карты автоматически раз в&nbsp;две недели;
+                    p &mdash;&nbsp;Следите за&nbsp;графиком платежей в&nbsp;мобильном приложении Подели.
+                    p ООО &laquo;А-4&nbsp;Технологии&raquo;, ОГРН 1227700064734, Юр. адрес: 115432, Россия, г. Москва, пр. Андропова, д.18, к.&nbsp;3, этаж/помещ./ ком. 9/XIV/1.
+                    p Подробная информация о&nbsp;работе сервиса на&nbsp;podeli.ru
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Наличный расчёт
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Подели&nbsp;&mdash; абсолютно бесплатный сервис оплаты покупок по&nbsp;частям.
+                    p Сегодня оплачивайте только&nbsp;25% стоимости покупки, остальное&nbsp;&mdash; тремя платежами раз в&nbsp;2&nbsp;недели.
+                    p Это не&nbsp;кредит, никаких дополнительных платежей и&nbsp;процентов&nbsp;&mdash; как обычная оплата картой!
+                    p Как купить? Всё просто:
+                    p &mdash;&nbsp;Выберите Подели в&nbsp;способах оплаты в&nbsp;корзине;
+                    p &mdash;&nbsp;Заполните короткую анкету;
+                    p &mdash;&nbsp;Оплатите&nbsp;25% стоимости и&nbsp;покупка уже ваша!
+                    p &mdash;&nbsp;Остальные три части будут списываться с&nbsp;вашей банковской карты автоматически раз в&nbsp;две недели;
+                    p &mdash;&nbsp;Следите за&nbsp;графиком платежей в&nbsp;мобильном приложении Подели.
+                    p ООО &laquo;А-4&nbsp;Технологии&raquo;, ОГРН 1227700064734, Юр. адрес: 115432, Россия, г. Москва, пр. Андропова, д.18, к.&nbsp;3, этаж/помещ./ ком. 9/XIV/1.
+                    p Подробная информация о&nbsp;работе сервиса на&nbsp;podeli.ru
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Банковской картой
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Подели&nbsp;&mdash; абсолютно бесплатный сервис оплаты покупок по&nbsp;частям.
+                    p Сегодня оплачивайте только&nbsp;25% стоимости покупки, остальное&nbsp;&mdash; тремя платежами раз в&nbsp;2&nbsp;недели.
+                    p Это не&nbsp;кредит, никаких дополнительных платежей и&nbsp;процентов&nbsp;&mdash; как обычная оплата картой!
+                    p Как купить? Всё просто:
+                    p &mdash;&nbsp;Выберите Подели в&nbsp;способах оплаты в&nbsp;корзине;
+                    p &mdash;&nbsp;Заполните короткую анкету;
+                    p &mdash;&nbsp;Оплатите&nbsp;25% стоимости и&nbsp;покупка уже ваша!
+                    p &mdash;&nbsp;Остальные три части будут списываться с&nbsp;вашей банковской карты автоматически раз в&nbsp;две недели;
+                    p &mdash;&nbsp;Следите за&nbsp;графиком платежей в&nbsp;мобильном приложении Подели.
+                    p ООО &laquo;А-4&nbsp;Технологии&raquo;, ОГРН 1227700064734, Юр. адрес: 115432, Россия, г. Москва, пр. Андропова, д.18, к.&nbsp;3, этаж/помещ./ ком. 9/XIV/1.
+                    p Подробная информация о&nbsp;работе сервиса на&nbsp;podeli.ru
+          .delivery__block
+            h2.delivery__title Доставка
+            .delivery__accordion(data-accordion="parent")
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка по&nbsp;России
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Подели&nbsp;&mdash; абсолютно бесплатный сервис оплаты покупок по&nbsp;частям.
+                    p Сегодня оплачивайте только&nbsp;25% стоимости покупки, остальное&nbsp;&mdash; тремя платежами раз в&nbsp;2&nbsp;недели.
+                    p Это не&nbsp;кредит, никаких дополнительных платежей и&nbsp;процентов&nbsp;&mdash; как обычная оплата картой!
+                    p Как купить? Всё просто:
+                    p &mdash;&nbsp;Выберите Подели в&nbsp;способах оплаты в&nbsp;корзине;
+                    p &mdash;&nbsp;Заполните короткую анкету;
+                    p &mdash;&nbsp;Оплатите&nbsp;25% стоимости и&nbsp;покупка уже ваша!
+                    p &mdash;&nbsp;Остальные три части будут списываться с&nbsp;вашей банковской карты автоматически раз в&nbsp;две недели;
+                    p &mdash;&nbsp;Следите за&nbsp;графиком платежей в&nbsp;мобильном приложении Подели.
+                    p ООО &laquo;А-4&nbsp;Технологии&raquo;, ОГРН 1227700064734, Юр. адрес: 115432, Россия, г. Москва, пр. Андропова, д.18, к.&nbsp;3, этаж/помещ./ ком. 9/XIV/1.
+                    p Подробная информация о&nbsp;работе сервиса на&nbsp;podeli.ru
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка по&nbsp;Москве и&nbsp;МО
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Подели&nbsp;&mdash; абсолютно бесплатный сервис оплаты покупок по&nbsp;частям.
+                    p Сегодня оплачивайте только&nbsp;25% стоимости покупки, остальное&nbsp;&mdash; тремя платежами раз в&nbsp;2&nbsp;недели.
+                    p Это не&nbsp;кредит, никаких дополнительных платежей и&nbsp;процентов&nbsp;&mdash; как обычная оплата картой!
+                    p Как купить? Всё просто:
+                    p &mdash;&nbsp;Выберите Подели в&nbsp;способах оплаты в&nbsp;корзине;
+                    p &mdash;&nbsp;Заполните короткую анкету;
+                    p &mdash;&nbsp;Оплатите&nbsp;25% стоимости и&nbsp;покупка уже ваша!
+                    p &mdash;&nbsp;Остальные три части будут списываться с&nbsp;вашей банковской карты автоматически раз в&nbsp;две недели;
+                    p &mdash;&nbsp;Следите за&nbsp;графиком платежей в&nbsp;мобильном приложении Подели.
+                    p ООО &laquo;А-4&nbsp;Технологии&raquo;, ОГРН 1227700064734, Юр. адрес: 115432, Россия, г. Москва, пр. Андропова, д.18, к.&nbsp;3, этаж/помещ./ ком. 9/XIV/1.
+                    p Подробная информация о&nbsp;работе сервиса на&nbsp;podeli.ru
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка с&nbsp;примеркой в&nbsp;Санкт-Петербурге
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Стоимость доставки составляет 390&nbsp;рублей.
+                    p Доставка осуществляется ежедневно с&nbsp;10:00 до&nbsp;22:00.
+                    p Для примерки&nbsp;Вы можете выбрать до&nbsp;7-ми позиций (в&nbsp;летний период количество товара передаваемые на&nbsp;доставку могут быть уменьшены).
+                    p Оплата заказа возможна курьеру при получении, как картой, так и&nbsp;наличными после примерки. Время для примерки составляет до&nbsp;20-ти минут.
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка в&nbsp;Беларусь, Киргизию, Армению и&nbsp;Казахстан
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Стоимость доставки составляет 390&nbsp;рублей.
+                    p Доставка осуществляется ежедневно с&nbsp;10:00 до&nbsp;22:00.
+                    p Для примерки&nbsp;Вы можете выбрать до&nbsp;7-ми позиций (в&nbsp;летний период количество товара передаваемые на&nbsp;доставку могут быть уменьшены).
+                    p Оплата заказа возможна курьеру при получении, как картой, так и&nbsp;наличными после примерки. Время для примерки составляет до&nbsp;20-ти минут.
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка по&nbsp;Кипру
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Стоимость доставки составляет 390&nbsp;рублей.
+                    p Доставка осуществляется ежедневно с&nbsp;10:00 до&nbsp;22:00.
+                    p Для примерки&nbsp;Вы можете выбрать до&nbsp;7-ми позиций (в&nbsp;летний период количество товара передаваемые на&nbsp;доставку могут быть уменьшены).
+                    p Оплата заказа возможна курьеру при получении, как картой, так и&nbsp;наличными после примерки. Время для примерки составляет до&nbsp;20-ти минут.
+              .delivery__element(data-accordion="element")
+                button.btn-reset.delivery__button(type="button" data-accordion="button") Доставка с&nbsp;примеркой в&nbsp;Лимасоле
+                  span.delivery__icon
+                    span
+                    span
+                .delivery__content(data-accordion="content")
+                  .delivery__content-wrapper
+                    p Стоимость доставки составляет 390&nbsp;рублей.
+                    p Доставка осуществляется ежедневно с&nbsp;10:00 до&nbsp;22:00.
+                    p Для примерки&nbsp;Вы можете выбрать до&nbsp;7-ми позиций (в&nbsp;летний период количество товара передаваемые на&nbsp;доставку могут быть уменьшены).
+                    p Оплата заказа возможна курьеру при получении, как картой, так и&nbsp;наличными после примерки. Время для примерки составляет до&nbsp;20-ти минут.

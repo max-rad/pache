@@ -1,0 +1,9 @@
+mixin story-card(data)
+  .story-card
+    .story-card__image-wrapper
+      +img("content/stories", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .story-card__info
+      p.story-card__date!=data.date
+      h2.story-card__title!=data.title
+      p.story-card__description!=data.description
+      a.story-card__button(href=data.href) Увидеть больше

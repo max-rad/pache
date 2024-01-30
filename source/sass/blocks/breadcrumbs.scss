@@ -70,8 +70,18 @@
 
     color: $color-silver;
 
+    transition: opacity $trans-default;
+
     @include vp-767 {
       font-size: 13px;
+    }
+
+    &.is-active {
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
     }
   }
 }

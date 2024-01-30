@@ -1,0 +1,102 @@
+mixin stories-page()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "12.2023",
+        title: "Камерная новогодняя встреча",
+        description: "В&nbsp;выходные у&nbsp;нас состоялась камерная новогодняя встреча для близких друзей бренда П&Aacute;ЧЕ"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "12.2023",
+        title: "Открытие флагманского магазина на&nbsp;Кипре",
+        description: "1&nbsp;декабря состоялось официальное открытие флагманского магазина П&Aacute;ЧЕ в&nbsp;Лимассоле."
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "10.2023",
+        title: "Презентация осенней коллекции 2023",
+        description: "17&nbsp;октября в&nbsp;Москве состоялась презентация коллекции сезона Осень 23&nbsp;российского бренда купальников и&nbsp;нижнего белья ПАЧЕ."
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-4",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "08.2022",
+        title: "Настоящая красота",
+        description: "Ирина, Женя, Катя и&nbsp;Надя из&nbsp;Петербурга&nbsp;&mdash; настоящая красота, радость. Мы&nbsp;расплываемся в&nbsp;улыбке, глядя на&nbsp;эту нежность."
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-5",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "12.2023",
+        title: "Камерная новогодняя встреча",
+        description: "В&nbsp;выходные у&nbsp;нас состоялась камерная новогодняя встреча для близких друзей бренда П&Aacute;ЧЕ"
+      },
+      {
+        href: "#",
+        image: {
+          src: "image-6",
+          format: "webp",
+          width: "730",
+          height: "462",
+          alt: "image"
+        },
+        date: "12.2022",
+        title: "Открытие флагманского магазина на&nbsp;Кипре",
+        description: "1&nbsp;декабря состоялось официальное открытие флагманского магазина П&Aacute;ЧЕ в&nbsp;Лимассоле."
+      }
+    ]
+
+  section.stories-page
+    .container
+      +breadcrumbs([
+        {
+          href: "#",
+          text: "Главная"
+        },
+        {
+          href: "#",
+          text: "Истории",
+          isActive: true
+        }
+      ])
+      .stories-page__wrapper
+        h1.stories-page__title Истории
+        ul.stories-page__list
+          each item in list
+            li.stories-page__item
+              +story-card(item)

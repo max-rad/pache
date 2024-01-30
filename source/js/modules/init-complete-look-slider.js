@@ -16,10 +16,12 @@ const initCompleteLookSlider = () => {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        hiddenClass: '.swiper-pagination-hidden',
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+        hiddenClass: '.swiper-button-hidden',
       },
       breakpoints: {
         320: {

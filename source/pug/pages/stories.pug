@@ -1,0 +1,23 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Паче - Истории"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "stories.html"
+
+block main
+    main
+      +stories-page()
+
+
+block modals
+  +modal("modal--add-to-basket")(data-modal="add-to-basket")
+    +add-to-basket()
+  +modal("modal--complete-look")(data-modal="complete-look")
+    +complete-look-modal()
+  +modal("modal--basket")(data-modal="basket")
+    +basket()

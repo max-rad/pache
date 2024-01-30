@@ -1,0 +1,168 @@
+mixin look-in-history()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+        price: "2&nbsp;500&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+        price: "2&nbsp;500&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+        price: "2&nbsp;500&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+        price: "2&nbsp;500&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c"
+        ]
+      },
+      {
+        image: {
+          src: "image-1",
+          format: "png",
+          width: "464",
+          height: "620",
+          alt: "image"
+        },
+        title: "Топ с&nbsp;открытыми плечами из&nbsp;муслина",
+        price: "2&nbsp;500&nbsp;₽",
+        sizes: [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        colors: [
+          "#292929",
+          "#ffffff",
+          "#d9619c",
+          "#92b66f",
+          "#8898b3",
+          "#d9619c",
+          "#292929",
+        ]
+      }
+    ]
+
+  section.look-in-history
+    .container
+      .look-in-history__wrapper
+        h2.look-in-history__title Модели представленные в&nbsp;истории
+        ul.look-in-history__list
+          each item in list
+            li.look-in-history__item
+              +catalog-card(item)

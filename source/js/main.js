@@ -10,6 +10,7 @@ import {initMapSlider} from './modules/init-map-slider.js';
 import {initCompleteLookSlider} from './modules/init-complete-look-slider.js';
 import {initQuantityCounter} from './modules/init-quantity-counter.js';
 import {initCatalogCardSlider} from './modules/init-catalog-card-slider.js';
+import {initAccordions} from './modules/accordion/init-accordions.js'
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
@@ -25,5 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initCompleteLookSlider();
     initQuantityCounter();
     initCatalogCardSlider();
+    initAccordions();
   });
 });
