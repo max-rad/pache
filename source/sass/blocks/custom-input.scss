@@ -23,7 +23,8 @@
     }
   }
 
-  input {
+  input,
+  textarea {
     width: 100%;
     padding: 5px 20px 4px;
 
@@ -73,9 +74,44 @@
     }
   }
 
+  &__error {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-contessa;
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include vp-1199 {
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
   &--icon {
     input {
       padding: 5px 48px 4px 20px;
+    }
+  }
+
+  &.is-error {
+    .custom-input__error {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

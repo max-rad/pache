@@ -4,8 +4,8 @@
   margin: 0 auto;
   padding: 0 40px;
 
-  @include vp-1599 {
-    max-width: calc(1280px + 40px * 2);
+  @include vp-1439 {
+    padding: 0 30px;
   }
 
   @include vp-767 {

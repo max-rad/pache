@@ -90,6 +90,12 @@
         line-height: 21px;
       }
     }
+
+    &--line-through {
+      text-decoration: line-through;
+
+      color: $color-grey;
+    }
   }
 
   &__button {

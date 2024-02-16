@@ -284,13 +284,13 @@ mixin card(data)
       .card__wrapper
         .card__slider.swiper(data-swiper="card")
           .card__images.swiper-wrapper
-            .card__image-wrapper.swiper-slide
+            a.card__image-wrapper.swiper-slide(href="img/content/card/image-1.png" data-fancybox="gallery")
               +img('content/card', "image-1", "png", 722, 1006, "image")
-            .card__image-wrapper.swiper-slide
+            a.card__image-wrapper.swiper-slide(href="img/content/card/image-2.png" data-fancybox="gallery")
               +img('content/card', "image-2", "png", 722, 1006, "image")
-            .card__image-wrapper.swiper-slide
+            a.card__image-wrapper.swiper-slide(href="img/content/card/image-3.png" data-fancybox="gallery")
               +img('content/card', "image-3", "png", 722, 1006, "image")
-            .card__image-wrapper.swiper-slide
+            a.card__image-wrapper.swiper-slide(href="img/content/card/image-4.png" data-fancybox="gallery")
               +img('content/card', "image-4", "png", 722, 1006, "image")
           .swiper-pagination
         .card__sticky-wrapper
@@ -299,6 +299,12 @@ mixin card(data)
             p.card__price 6&nbsp;900&nbsp;₽
             +size(["XS", "S", "M", "L", "XL"]).card__sizes
             +color(colorsList).card__colors
+            +custom-input({
+              type: "number",
+              name: "certificate",
+              placeholder: "Напишите сумму сертификата",
+              error: "true"
+            }).card__input
             .card__button-wrapper
               +btn({type: "button", text: "Добавить в корзину"}).card__button
               p.card__attention На&nbsp;пошив данного изделия потребуется от&nbsp;10&nbsp;рабочих дней

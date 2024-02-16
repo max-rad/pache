@@ -85,34 +85,7 @@
         color: $color-default-white;
       }
 
-      .order__block-wrapper {
-        display: none;
-
-        &--result {
-          display: block;
-        }
-      }
-
       .order__success {
-        display: block;
-      }
-    }
-
-    &.is-invalid {
-      .order__label::before {
-        background-color: $color-contessa;
-        color: $color-default-white;
-      }
-
-      .order__block-wrapper {
-        display: none;
-
-        &--result {
-          display: block;
-        }
-      }
-
-      .order__errors {
         display: block;
       }
     }
@@ -193,6 +166,8 @@
   }
 
   &__block-wrapper {
+    display: flex;
+    flex-direction: column;
     padding: 20px 20px 30px;
 
     &--result {
@@ -433,7 +408,7 @@
 
   &__price-label {
     display: block;
-    margin: 0;
+    margin: 0 20px 0 0;
 
     font-weight: 400;
     font-size: 15px;
@@ -451,6 +426,17 @@
     line-height: 20px;
 
     color: $color-nero;
+  }
+
+  &__old-price {
+    margin: 0 0 0 10px;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: line-through;
+
+    color: $color-grey;
   }
 
   &__pay {

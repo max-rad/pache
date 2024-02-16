@@ -37,4 +37,6 @@ const initCompleteLookSlider = () => {
   })
 }
 
+window.initCompleteLookSlider = initCompleteLookSlider;
+
 export {initCompleteLookSlider};
