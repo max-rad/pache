@@ -93,14 +93,16 @@
 
   &__image {
     position: absolute;
+    display: flex;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    img {
+      object-fit: cover;
+    }
   }
 
   &__image-slider {
@@ -109,15 +111,16 @@
 
   &__image-slide {
     position: absolute;
+    display: flex;
 
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    img {
+      object-fit: cover;
+    }
   }
 
   &__info {
@@ -248,11 +251,12 @@
       z-index: 0;
       flex-direction: column;
       padding: 10px 0;
+      height: auto;
     }
   }
 
   &__title {
-    max-width: 252px;
+    max-width: 210px;
     margin: 0 20px 0 0;
 
     font-weight: 400;
@@ -262,6 +266,7 @@
     color: $color-nero;
 
     @include vp-1023 {
+      min-height: 40px;
       margin: 0 0 10px;
 
       font-size: 15px;

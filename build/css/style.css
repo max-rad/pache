@@ -4131,6 +4131,7 @@ button,
 }
 
 .goods__slides {
+  height: auto;
   margin-bottom: 60px;
 }
 
@@ -4220,13 +4221,18 @@ button,
 
 .catalog-card__image {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.catalog-card__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .catalog-card__image-slider {
@@ -4235,13 +4241,18 @@ button,
 
 .catalog-card__image-slide {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.catalog-card__image-slide img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .catalog-card__info {
@@ -4362,7 +4373,7 @@ button,
 }
 
 .catalog-card__title {
-  max-width: 252px;
+  max-width: 210px;
   margin: 0 20px 0 0;
   font-weight: 400;
   font-size: 16px;
@@ -5034,6 +5045,8 @@ button,
 }
 
 .card__button {
+  width: 100%;
+  max-width: 242px;
   margin: 0;
 }
 
@@ -6139,8 +6152,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 24px;
-  height: 18px;
+  min-width: 24px;
+  padding: 2px 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -6160,8 +6173,6 @@ button,
 
 .basket-card__color {
   display: block;
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
 }
 
@@ -6274,6 +6285,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .basket-card__delete svg {
@@ -6281,6 +6300,10 @@ button,
   flex-shrink: 0;
   width: 18px;
   height: 20px;
+}
+
+.basket-card__delete.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .stores__wrapper {
@@ -6994,7 +7017,7 @@ button,
 
 .color--gift {
   max-height: 56px;
-  padding: 30px 0 0;
+  padding: 30px 0 0 3px;
 }
 
 .color--gift .color__list {
@@ -7032,6 +7055,7 @@ button,
   -moz-column-gap: 10px;
   column-gap: 10px;
   row-gap: 10px;
+  min-height: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -7049,8 +7073,9 @@ button,
   align-items: center;
 }
 
-.color__item.selected .color__color {
-  border: 1px solid #292929;
+.color__item.selected .color__button {
+  -webkit-box-shadow: 0 0 0 3px #838383;
+  box-shadow: 0 0 0 3px #838383;
 }
 
 .color__item.selected [data-tooltip]::after {
@@ -7061,11 +7086,11 @@ button,
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -o-transition: border 0.3s ease, box-shadow 0.3s ease;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  transition: border 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -7088,7 +7113,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   margin-left: 15px;
-  width: 12px;
+  width: 24px;
   height: 20px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -7167,24 +7192,38 @@ button,
 
 .gift-card__image {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.gift-card__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.gift-card__image-slider {
+  width: 100%;
 }
 
 .gift-card__image-slide {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.gift-card__image-slide img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .gift-card__info-wrapper {
@@ -8519,9 +8558,11 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 10px 0;
+    height: auto;
   }
 
   .catalog-card__title {
+    min-height: 40px;
     margin: 0 0 10px;
     font-size: 15px;
     line-height: 20px;
@@ -10121,6 +10162,10 @@ button,
 
   .basket-card__amount-button:hover:not(.focus-visible) {
     background-color: #d3d3d3;
+  }
+
+  .basket-card__delete:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 
   .stores__link:hover:not(.focus-visible) .stores__location {

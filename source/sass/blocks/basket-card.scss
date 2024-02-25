@@ -150,8 +150,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 24px;
-    height: 18px;
+    min-width: 24px;
+    padding: 2px 4px;
 
     font-weight: 400;
     font-size: 12px;
@@ -169,9 +169,6 @@
 
   &__color {
     display: block;
-
-    width: 20px;
-    height: 20px;
 
     border-radius: 50%;
 
@@ -329,11 +326,20 @@
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+    user-select: none;
+
+    transition: opacity $trans-default;
+
     svg {
       flex-shrink: 0;
 
       width: 18px;
       height: 20px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
     }
   }
 }

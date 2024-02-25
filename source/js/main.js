@@ -11,23 +11,26 @@ import {initCompleteLookSlider} from './modules/init-complete-look-slider.js';
 import {initQuantityCounter} from './modules/init-quantity-counter.js';
 import {initCatalogCardSlider} from './modules/init-catalog-card-slider.js';
 import {initAccordions} from './modules/accordion/init-accordions.js'
-import { Fancybox } from '@fancyapps/ui';
+import {Fancybox} from '@fancyapps/ui';
+import {initRevolutGateaway} from './modules/init-revolut-gateaway.js';
 
 window.addEventListener('DOMContentLoaded', () => {
+  initHeaderMenu();
+  initHeaderAccordion();
+  initModals();
+
   window.addEventListener('load', () => {
-    initHeaderMenu();
-    initHeaderAccordion();
     initIntroSlider();
     initGoodsSlider();
     initCardSlider();
     initShowMore();
     initTabs();
-    initModals();
     initMapSlider();
     initCompleteLookSlider();
     initQuantityCounter();
     initCatalogCardSlider();
     initAccordions();
+    initRevolutGateaway();
   });
 });
 

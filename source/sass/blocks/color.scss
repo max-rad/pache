@@ -83,7 +83,7 @@
 
   &--gift {
     max-height: 56px;
-    padding: 30px 0 0;
+    padding: 30px 0 0 3px;
 
     .color__list {
       column-gap: 24px;
@@ -118,6 +118,7 @@
     grid-template-columns: repeat(6, 20px);
     column-gap: 10px;
     row-gap: 10px;
+    min-height: 26px;
     margin: 0;
     padding: 0;
 
@@ -130,8 +131,8 @@
     align-items: center;
 
     &.selected {
-      .color__color {
-        border: 1px solid $color-nero;
+      .color__button {
+        box-shadow: 0 0 0 3px $color-grey;
       }
 
       [data-tooltip]::after {
@@ -146,7 +147,7 @@
 
     border-radius: 50%;
 
-    transition: border $trans-default, box-shadow $trans-default;
+    transition: box-shadow $trans-default;
 
     cursor: pointer;
     user-select: none;
@@ -162,7 +163,7 @@
     align-items: center;
     margin-left: 15px;
 
-    width: 12px;
+    width: 24px;
     height: 20px;
 
     cursor: pointer;
