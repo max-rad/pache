@@ -407,8 +407,6 @@
   }
 
   &__aside {
-    max-width: 155px;
-
     @include vp-1023 {
       display: none;
     }
