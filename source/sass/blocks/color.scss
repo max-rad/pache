@@ -48,7 +48,7 @@
 
     .color__list {
       @include vp-1023 {
-        column-gap: 24px;
+        grid-template-columns: repeat(8, 20px);
       }
     }
 
@@ -123,6 +123,10 @@
     padding: 0;
 
     list-style: none;
+
+    @include vp-767 {
+      grid-template-columns: repeat(8, 20px);
+    }
   }
 
   &__item {

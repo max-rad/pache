@@ -1,23 +1,25 @@
-const initShowMore = () => {
-  const showMore = document.querySelectorAll('[data-show-more]');
+const showMore = document.querySelectorAll('[data-show-more]');
+const breakpointMedia = window.matchMedia('(max-width: 767px)');
 
-  if (!showMore.length) {
-    return;
+let length = 6;
+
+const breakpointChecker = () => {
+  if (breakpointMedia.matches) {
+    length = 8;
+  } else {
+    length = 6;
   }
-
-  // const config = {
-  //   attributes: true,
-  //   attributeFilter: ['style'],
-  //   subtree: true
-  // };
 
   showMore.forEach((element) => {
     const items = element.querySelectorAll('li:not([style="display: none;"])');
     const icon = element.querySelector('[data-show-more-button]');
 
-    if (items.length <= 6) {
+    if (items.length <= length) {
       icon.style.display = 'none';
       element.style.overflow = 'visible';
+    } else {
+      icon.style.display = 'block';
+      element.style.overflow = 'hidden';
     }
 
     // const callback = function(mutationList, observer) {
@@ -38,6 +40,22 @@ const initShowMore = () => {
     // observer.observe(element.querySelector('ul'), config);
   });
 
+  breakpointMedia.addListener(breakpointChecker);
+};
+
+const initShowMore = () => {
+  if (!showMore.length) {
+    return;
+  }
+
+  breakpointChecker();
+
+  // const config = {
+  //   attributes: true,
+  //   attributeFilter: ['style'],
+  //   subtree: true
+  // };
+
   document.addEventListener('click', (evt) => {
     const target = evt.target;
 
@@ -55,7 +73,7 @@ const initShowMore = () => {
       if (window.innerWidth < 1023) {
         const items = showMoreButton.querySelectorAll('li:not([style="display: none;"])');
         const icon = showMoreButton.querySelector('[data-show-more-button]');
-        if (items.length <= 6) {
+        if (items.length <= length) {
           icon.style.display = 'none';
           element.style.overflow = 'visible';
         } else {

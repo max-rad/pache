@@ -5176,6 +5176,7 @@ button,
 .card .swiper-pagination {
   position: relative;
   display: none;
+  bottom: 0;
 }
 
 .size--gift .size__list {
@@ -8802,9 +8803,8 @@ button,
   }
 
   .color--card .color__list {
-    -webkit-column-gap: 24px;
-    -moz-column-gap: 24px;
-    column-gap: 24px;
+    -ms-grid-columns: (20px)[8];
+    grid-template-columns: repeat(8, 20px);
   }
 
   .color--card [data-tooltip]::after {
@@ -9490,7 +9490,7 @@ button,
   .card__slider {
     width: 100%;
     max-width: 334px;
-    margin: 0 auto 30px;
+    margin: 0 auto 5px;
     overflow: hidden;
     overflow: clip;
   }
@@ -9500,19 +9500,19 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .card__image-wrapper {
     width: 100%;
     max-width: 334px;
-    height: auto;
+    height: 386px;
   }
 
   .card__image-wrapper img {
     width: 100%;
     max-width: 334px;
-    height: auto;
+    height: 386px;
   }
 
   .card__sticky-wrapper {
@@ -9526,8 +9526,13 @@ button,
   }
 
   .card__title {
+    max-width: unset;
     margin: 0 0 15px;
     font-size: 16px;
+  }
+
+  .card__price-wrapper {
+    margin: 0 0 15px;
   }
 
   .card__price {
@@ -9536,6 +9541,14 @@ button,
 
   .card__old-price {
     font-size: 18px;
+  }
+
+  .card__sizes {
+    margin: 0 0 15px;
+  }
+
+  .card__colors {
+    margin: 0 0 15px;
   }
 
   .card__not-available-button {
@@ -9807,6 +9820,11 @@ button,
   .basket__image-wrapper img {
     width: 119px;
     height: 156px;
+  }
+
+  .color__list {
+    -ms-grid-columns: (20px)[8];
+    grid-template-columns: repeat(8, 20px);
   }
 
   .stories-page {
