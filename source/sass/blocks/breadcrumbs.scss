@@ -3,6 +3,7 @@
   align-items: center;
 
   @include vp-767 {
+    display: none;
     align-items: flex-start;
   }
 

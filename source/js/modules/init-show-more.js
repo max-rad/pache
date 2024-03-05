@@ -75,10 +75,10 @@ const initShowMore = () => {
         const icon = showMoreButton.querySelector('[data-show-more-button]');
         if (items.length <= length) {
           icon.style.display = 'none';
-          element.style.overflow = 'visible';
+          showMoreButton.style.overflow = 'visible';
         } else {
           icon.style.display = 'block';
-          element.style.overflow = 'hidden';
+          showMoreButton.style.overflow = 'hidden';
         }
       }
     }

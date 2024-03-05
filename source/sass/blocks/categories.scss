@@ -52,11 +52,11 @@
   }
 
   &__image-wrapper {
-    width: 728px;
+    width: 100%;
     height: 866px;
 
     @include vp-1599 {
-      width: 610px;
+      width: 100%;
       height: 726px;
     }
 
@@ -80,13 +80,13 @@
     }
 
     img {
-      width: 728px;
+      width: 100%;
       height: 866px;
 
       object-fit: cover;
 
       @include vp-1599 {
-        width: 610px;
+        width: 100%;
         height: 726px;
       }
 
