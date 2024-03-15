@@ -32,6 +32,20 @@ const initCardSlider = () => {
   }
 
   breakpointChecker();
+
+  document.addEventListener('click', documentClickHandler);
+}
+
+const documentClickHandler = (evt) => {
+  const target = evt.target;
+
+  if (!target.closest('[data-treevalue]')) {
+    return;
+  }
+
+  if (swiper) {
+    swiper.update();
+  }
 }
 
 export {initCardSlider};

@@ -1,0 +1,10 @@
+mixin page-not-found()
+  section.page-not-found
+    .container
+      .page-not-found__wrapper
+        .page-not-found__image
+          +img("content", "404", "webp", 720, 600, "404")
+        .page-not-found__info
+          h1.page-not-found__title Страница не&nbsp;найдена
+          p.page-not-found__description Возможно вы&nbsp;ввели неправильный адрес или страница была удалена
+          +btn({href: "/", text: "Вернуться на главную"}).page-not-found__button

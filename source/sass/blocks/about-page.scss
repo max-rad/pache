@@ -1,0 +1,68 @@
+.about-page {
+  &__wrapper {
+    padding: 35px 0 70px;
+
+    @include vp-1023 {
+      padding: 35px 0 50px;
+    }
+
+    @include vp-767 {
+      padding: 30px 0 40px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 45px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      font-size: 25px;
+      line-height: 34px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+    margin: 0 0 40px;
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 800px;
+
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $color-default-black;
+
+    p {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

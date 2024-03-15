@@ -6,6 +6,10 @@ const initIntroSlider = () => {
   }
 
   const swiper = new Swiper(slider, {
+    speed: 500,
+    autoplay: {
+      delay: 3000,
+    },
     slidesPerView: 1,
     loop: true,
     pagination: {

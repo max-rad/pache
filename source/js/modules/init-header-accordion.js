@@ -35,11 +35,16 @@ const documentHandler = (evt) => {
   const dropdown = item.querySelector('[data-nav="dropdown"]');
 
   if (link.classList.contains('is-active')) {
-    link.classList.remove('is-active');
-    dropdown.style.maxHeight = 0;
+    if (!target.closest('.main-nav__link')) {
+      link.classList.remove('is-active');
+      dropdown.style.maxHeight = 0;
+    }
+
   } else {
-    link.classList.add('is-active');
-    dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+    if (!target.closest('.main-nav__link')) {
+      link.classList.add('is-active');
+      dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+    }
   }
 }
 

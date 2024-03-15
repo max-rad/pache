@@ -68,7 +68,8 @@ mixin header(headerMods, currentUrl)
             ul.main-nav__list(data-nav="list")
               each item in headerLinks
                 li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown} data-nav=(item.dropdown ? "item" : false))
-                  a.main-nav__link(href=item.href data-nav=(item.dropdown ? "link" : false))!=item.text
+                  .main-nav__link-wrapper(data-nav=(item.dropdown ? "link" : false))
+                    a.main-nav__link(href=item.href )!=item.text
                     if (item.dropdown)
                       +icon("icon-chevron-down", 11, 6)
 

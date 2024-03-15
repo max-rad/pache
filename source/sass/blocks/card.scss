@@ -230,10 +230,13 @@
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
+    white-space: nowrap;
 
     color: $color-nero;
 
     @include vp-767 {
+      margin: 0 10px 0 0;
+
       font-size: 18px;
     }
   }
@@ -245,11 +248,51 @@
     font-size: 20px;
     line-height: normal;
     text-decoration: line-through;
+    white-space: nowrap;
 
     color: $color-grey;
 
     @include vp-767 {
       font-size: 18px;
+    }
+  }
+
+  &__podeli {
+    margin: 0 0 0 20px;
+
+    @include vp-767 {
+      margin: 0 0 0 10px;
+    }
+
+    .podeli_widget {
+      border: 1px solid $color-nero;
+    }
+
+    .podeli_widget.item {
+      min-width: unset;
+    }
+
+    .podeli_widget.item .wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 5px;
+    }
+
+    .podeli_widget.item .price__row:nth-child(1) {
+      margin: 0;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: normal;
+      text-align: center;
+
+      color: $color-nero;
+    }
+
+    .podeli_widget .price__icon-info {
+      flex-shrink: 0;
+      align-self: center;
+      margin: 0 0 0 10px;
     }
   }
 

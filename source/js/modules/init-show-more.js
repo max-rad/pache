@@ -18,7 +18,7 @@ const breakpointChecker = () => {
       icon.style.display = 'none';
       element.style.overflow = 'visible';
     } else {
-      icon.style.display = 'block';
+      icon.style.display = 'flex';
       element.style.overflow = 'hidden';
     }
 
@@ -77,7 +77,7 @@ const initShowMore = () => {
           icon.style.display = 'none';
           showMoreButton.style.overflow = 'visible';
         } else {
-          icon.style.display = 'block';
+          icon.style.display = 'flex';
           showMoreButton.style.overflow = 'hidden';
         }
       }
